@@ -4,6 +4,6 @@ title: About
 permalink: /about/
 ---
 
-I'm Programmer for Python & Django. I've made quite a few web apps, especially on Django. Now, I am doing more on backend.
+Podría definirme como geoinquieto. Soy graduado en geografía y especializado en GIS y teledetección.
 
-email: agus[at]python.web.id
+Actualmente trabajo en [3DSCANNER](http://3dscanner.es) y en mis ratos libres intento seguir el ritmo del mundo geo, poniendo en práctica herramientas como las que publico en este blog personal. 
