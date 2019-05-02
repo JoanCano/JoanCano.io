@@ -1,18 +1,3 @@
----
-layout: post
-title: Instalador aplicaciones post-formateo
-date: 2017-10-18
-author: Joan Cano
-categories:
-  - Linux
-tags:
-  - Linux
-  - apps
----
-
-Script básico en **bash** para la instalación de los programas que suelo utilizar en Linux.
-
-```
 #!/bin/bash
 
 sudo apt-get update
@@ -53,7 +38,3 @@ sudo apt -y upgrade
 sudo apt install -y python-software-properties qgis python-qgis qgis-plugin-grass
 
 sudo apt-get install keepassx
-
-```
-
-[installer.sh](../static/scripts/installer.sh)

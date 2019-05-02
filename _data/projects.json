@@ -1,14 +1,14 @@
 [
 	{
-		"slug": "cool-project",
-		"name": "Cool project 1",
+		"slug": "Modelos-3D",
+		"name": "Modelos 3D",
 		"image": "placeholder.jpg",
 		"url": "https://www.google.com",
 		"date": "Jan 2014",
-		"tags": ["Angular JS","API"]
+		"tags": ["modelos3D"]
 	},
 	{
-		"name": "Cool project 2",
+		"name": "Geo",
 		"image": "placeholder.jpg",
 		"url": "#",
 		"date": "May 2014",

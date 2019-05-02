@@ -5,20 +5,17 @@ date:   2017-10-21
 categories: jekyll blogs
 ---
 
-Está claro que existen diferentes posibilidades en cuanto a la creación de blogs personales, siendo Wordpress o Blogspot de los más utilizados.
+Hay muchas posibilidades para la creación de blogs personales, siendo Wordpress o Blogspot de los más utilizados, sin embargo, ¡hay alternativas!.
 
-Sin embargo, ¡hay alternativas!, que nos acercan a un ámbitos más sencillo y enfocado al desarrollo propio y personal, además de ser muy fáciles en su gestión, actualización y uso. Se trata de un nuevo concepto de blog, a partir de una tecnología que se podría resumir como un **motor de transformación de texto**.
+Una de las que más me gusta es [Jekyll](https://jekyllrb.com/), aunque [Hugo](https://themes.gohugo.io/) también es una buena opción. Jekyll es a grandes rasgos un generador de páginas web estáticas, con una serie de ventajas que lo diferencias de otros modos de hacerte un blog:
 
-En este post me voy a centrar en [Jekyll](https://jekyllrb.com/), puesto que tenemos otras alternativas como [Hugo](https://themes.gohugo.io/). Jekyll es a grandes rasgos un generador de páginas web estáticas, orientado a una única función que es la de tener una página web donde colgar posts.
-Algunas de sus notables ventajas son:
 - La facilidad de edición de nuevos post mediante lenguaje markdown (en algún editor de escritorio como Atom o Haroopad), o a partir de otros editores web como [prose.io](http://prose.io/).
-
 - Tiene una rápida y fácil instalación que más abajo se detalla
 - Gran cantidad de [temas/plantillas predefinidas](http://jekylltheme.org/)
 - La posibilidad de alojarlo en páginas como Github o Gitlab, permitiendo tener un espacio en la web
 
-Se basa en la idea de que, una vez instalado en el servidor local, añadir contenido es tan sencillo como crear archivos markdown, de texto ó HTML.
-Una vez se tiene escrito el post, el sitio se compila solo y ya se podría alojar en github o gitlab
+En el caso de que queramos visualizar el resultado de nuestro blog, podemos montar Jekyll en nuestro ordenador (con linux) o servidor. Por otro lado, si el destino del blog es subirlo a github, no hace falta realizar este paso, tan solo hay que modificar los archivos necesarios y subir tus nuevos posts en formato markdown.
+
 
 ### Pre-instalación Jekyll. Requisitos
 * Un SO GNU/Linux o macOS
@@ -41,10 +38,12 @@ $ ruby setup.rb
 ```
 
 En el caso de que las tengas, únicamente actualízalas:
+
 ```bash
 # Tienes que ser administrador o root
 $ gem update --system  
 ```
+
 * Comprueba que GCC y Make se han instalado
 
 ```bash
@@ -53,6 +52,7 @@ make -v
 ```
 
 ## Instalación de Jekyll
+
 ```bash
 # Instalación de Jekyll
 $ gem install jekyll bundler
@@ -75,7 +75,7 @@ git clone https://github.com/JoanCano/joancano.github.io.git
 # Entraría a la carpeta del blog
 $ cd joancano.io/
 ```
-En este punto es cuando crearíamos el nuevo post dentro de la carpeta ```_post```, donde guardaremos las nuevas publicaciones. Estas deben deben seguir el siguiente formato:  ```YEAR-MONTH-DAY-title.MARKUP```
+En este punto es cuando crearíamos el nuevo post dentro de la carpeta ```_post```, donde guardaremos las nuevas publicaciones. Estas deben deben seguir el siguiente formato:  ```YEAR-MONTH-DAY-title.md```
 
 La carpeta ```_site``` es donde se generarán los nuevos post una vez sean transformados por Jekyll.
 
@@ -95,7 +95,7 @@ categories: jekyll update
 Como se ha descargado el blog desde Github, lo primero será iniciar el repositorio en git.
 
 ```bash
-cd joancano.io
+cd joancano.github.io
 git init
 ```
 Jekyll también viene con un servidor de desarrollo incorporado que te permitirá previsualizarlo cómo en tu navegador localmente.
@@ -104,9 +104,10 @@ Jekyll también viene con un servidor de desarrollo incorporado que te permitir�
 $ jekyll serve
 ```
 
-En caso de que no nos permita visualizarlo, es por los permisos del firewall. Tenemos que activar el puerto 4000.
+En caso de que no nos permita visualizarlo, es por los permisos del navegador. Tenemos que activar el puerto 4000.
 
 ```
 $ sudo ufw allow 4000
 ```
-Ya tenemos nuestro blog corriendo en [local](http://localhost:4000/joancano.github.io/)!. Ahora solo tendremos que subirlo a Github por ejemplo para poder tener nuestro blog en la web.
+
+Ya tenemos nuestro blog corriendo en [local](http://localhost:4000/joancano.github.io/)!. Ahora solo tendremos que subirlo a Github para poder tener nuestro blog en la web.
