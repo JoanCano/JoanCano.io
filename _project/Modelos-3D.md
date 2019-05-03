@@ -9,27 +9,23 @@ Los siguientes vídeos y visualizadores son algunos de los modelos que he hecho.
 
 **Photogrammetry of a pine cone with Agisoft**
 
-[![IMAGE ALT TEXT HERE](../static/img/pinecone.PNG)](https://www.youtube.com/watch?v=m_KSg91wAIk)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/m_KSg91wAIk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 **Photogrammetry examples. Buildings #1**
 
-[![IMAGE ALT TEXT HERE](../static/img/church.PNG)](https://www.youtube.com/watch?v=0JsuTjp3KMQ)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0JsuTjp3KMQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 **Photogrammetry examples. Statue #2**
 
-[![IMAGE ALT TEXT HERE](../static/img/statue.PNG)](https://www.youtube.com/watch?v=oJfaZTwtiqw)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oJfaZTwtiqw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 **Photogrammetry examples. Building wall with Canon 600D**
 
-[![IMAGE ALT TEXT HERE](../static/img/wall.PNG)](https://www.youtube.com/watch?v=1XD9KzgTD7M)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1XD9KzgTD7M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 **Photogrammetry of statue with agisoft and Canon 600D (18 mm)**
 
-<!-- blank line -->
-<figure class="video_container">
-  <iframe src="https://www.youtube.com/watch?v=GiyiEjxY1E4" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
-<!-- blank line -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GiyiEjxY1E4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Modelos en Sketchfab
 
