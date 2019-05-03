@@ -1,9 +1,7 @@
 ---
-layout: post
-title: "Books, links and resources"
-date: 2019-04-27
-author: "Joan Cano"
-output: html_document
+layout: project_single
+title:  "library"
+slug: "library"
 ---
 
 This post is written in MarkDown, so may be you could want to check this [Markdown Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
