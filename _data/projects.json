@@ -1,23 +1,23 @@
 [
 	{
 		"slug": "Modelos-3D",
-		"name": "Modelos 3D",
-		"image": "placeholder.jpg",
+		"name": "Modelos-3D",
+		"image": "../static/img/modelos3d.png",
 		"url": "https://joancano.github.io/projects/modelos_3D",
 		"date": "Oct 2018",
 		"tags": ["3D"]
 	},
 	{
-		"slug": "library",
+		"slug": "Library",
 		"name": "Library",
-		"image": "placeholder.jpg",
+		"image": "https://www.scream.ro/wp-content/uploads/digital-library-books-flying-into-a-tablet-shutterstock_125896391.jpg",
 		"url": "https://joancano.github.io/projects/library",
 		"date": "Nov 2018"
 	},
 	{
 		"slug": "Lifemmetry",
 		"name": "Lifemmetry",
-		"image": "placeholder.jpg",
+		"image": "../static/img/gitbook.png",
 		"url": "https://joancano.gitbook.io/lifemmetry/",
 		"date": "Jan 2019",
 		"tags": ["fotogrametria","3D"]
