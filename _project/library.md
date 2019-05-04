@@ -1,7 +1,7 @@
 ---
 layout: project_single
-title:  "library"
-slug: "library"
+title:  "Library"
+slug: "Library"
 ---
 
 This post is written in MarkDown, so may be you could want to check this [Markdown Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
