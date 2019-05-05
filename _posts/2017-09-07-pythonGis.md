@@ -109,5 +109,3 @@ for c in campos:
         del cursor
 del campos
 ```
-
-[Download script](https://github.com/JoanCano/Joanproject/blob/master/python_gis/joan_script.py)

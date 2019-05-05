@@ -52,4 +52,4 @@ sudo apt-get install keepassx
 
 ```
 
-[installer.sh](../static/scripts/installer.sh)
+[installer.sh](http://sanfrancisco.duckdns.org/joan/scripts/installer.sh)
