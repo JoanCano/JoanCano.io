@@ -1,6 +1,6 @@
 ---
 layout: posts_by_category
 categories: jekyll
-title: Jekyll
+title: jekyll
 permalink: /category/jekyll
 ---

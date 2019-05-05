@@ -2,7 +2,6 @@
 layout: post
 title: Cómo hacer visores con Panellum
 date:   2019-01-04
-author: "Joan Cano Aladid"
 categories: [fotografia]
 ---
 

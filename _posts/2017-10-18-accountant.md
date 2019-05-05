@@ -3,10 +3,7 @@ layout: post
 title: Sumando segundos en metadatos de imágenes
 date: 2017-10-17
 author: Joan Cano
-categories:
-  - bash
-tags:
-  - Linux, bash, exiftool
+categories: [bash]
 ---
 Hace cierto tiempo, se me planteó la posibilidad de renombrar los metadatos de un grupo de imágenes
 las cuales habían sido tomadas sin la fecha y hora.

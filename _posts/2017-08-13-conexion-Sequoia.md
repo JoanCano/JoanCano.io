@@ -1,9 +1,8 @@
 ---
+layout: post
 title: "Obtención de datos mediante HTTP-API de la cámara Parrot Sequoia"
 date: 2017-08-13
-author: "Joan Cano"
-categories: [sequoia]
-tags: [sequoia, remote sensing]
+categories: [remote_sensing]
 ---
 A continuación, muestro una manera sencilla de conectarse y exportar datos del sensor *Sunshine*.
 

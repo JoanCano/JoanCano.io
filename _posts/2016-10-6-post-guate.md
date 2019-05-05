@@ -3,17 +3,16 @@ layout: post
 title: "Pequeñas aventuras"
 date: 2016-10-06
 author: "Joan Cano"
-categories: [Guatemala]
-tags: [Guatemala, OSM]
+categories: [OSM]
 ---
 
 ### Guatemala..
 
-Gracias a una oportunidad de cooperación en Guatemala tuve la suerte de poder ir a enseñar cartografía a dos pequeñas comunidades rurales. 
+Gracias a una oportunidad de cooperación en Guatemala tuve la suerte de poder ir a enseñar cartografía a dos pequeñas comunidades rurales.
 
 La siguiente imagen es de la escuelita donde enseñé junto a mis compañeros el proyecto de OSM y lo que podía suponer para ellos, en concreto a esa comunidad y el municipio.
 
-<iframe width="800" height="500" src="../../panos/panellum.html" frameborder="0" allowfullscreen></iframe>
+<iframe width="800" height="500" src="../static/panos/panellum.html" frameborder="0" allowfullscreen></iframe>
 
 
 

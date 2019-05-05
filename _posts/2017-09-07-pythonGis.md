@@ -2,18 +2,14 @@
 layout: post
 title: Script en ArcPy para calcular superficies por su valor
 date: 2017-09-07
-author: Joan Cano
-categories:
-  - python
-tags:
-  - python
+categories: [python]
 
 ---
 
 ### Mi primer Script
 
 Cursando el Máster en TIG en la [Universidad de Zaragoza](http://unizar.es/">Universidad de Zaragoza), una de las asignaturas fue [Python](https://www.python.org/). En ella hemos utilizado como intérprete [ArcPy](http://desktop.arcgis.com/es/arcmap/10.3/analyze/arcpy/what-is-arcpy-.htm) el cual tiene extensión en ArcGIS para analizar datos, conversión de datos, administración de datos y automatización de mapas, lo que ayuda a aumentar la productividad.
-				
+
 Dejo aquí abajo el script. Se trata de un simple geoproceso que consiste en extraer de una capa de puntos cualquiera, el valor que se demanda de la suma de los píxeles que caen dentro de los puntos. De manera que itera, generando buffers, hasta que alcanza el valor que se le pide.
 
 ```python

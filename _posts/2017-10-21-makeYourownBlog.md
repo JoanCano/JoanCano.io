@@ -2,7 +2,7 @@
 layout: post
 title:  "¿Cómo crearte un blog personal con Jekyll?"
 date:   2017-10-21
-categories: jekyll blogs
+categories: [jekyll]
 ---
 
 Hay muchas posibilidades para la creación de blogs personales, siendo Wordpress o Blogspot de los más utilizados, sin embargo, ¡hay alternativas!.

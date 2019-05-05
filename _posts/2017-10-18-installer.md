@@ -3,11 +3,7 @@ layout: post
 title: Instalador aplicaciones post-formateo
 date: 2017-10-18
 author: Joan Cano
-categories:
-  - Linux
-tags:
-  - Linux
-  - apps
+categories: [linux]
 ---
 
 Script básico en **bash** para la instalación de los programas que suelo utilizar en Linux.

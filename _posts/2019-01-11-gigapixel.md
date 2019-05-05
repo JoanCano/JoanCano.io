@@ -3,8 +3,7 @@ layout: post
 title: "Cómo hacer imágenes Gigapíxel"
 date: 2019-01-11
 author: "Joan Cano"
-categories: [fotografía]
-tags: [fotografía]
+categories: [fotografia]
 ---
 
 La curiosidad de esta semana ha sido cómo hacer imágenes Gigapíxel..
