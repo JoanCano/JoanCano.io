@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog</title>
+    <description>Bienvenido a mi espacio web personal</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 05 May 2019 15:03:28 +0200</pubDate>
+    <lastBuildDate>Sun, 05 May 2019 15:03:28 +0200</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>fotogrametria_mobil</title>
+        <description>&lt;div class=&quot;sketchfab-embed-wrapper&quot;&gt;&lt;iframe width=&quot;640&quot; height=&quot;480&quot; src=&quot;https://sketchfab.com/models/513d185fd69440a28594a5ec130fc7ca/embed&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen; vr&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+
+&lt;p style=&quot;font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;&quot;&gt;
+    &lt;a href=&quot;https://sketchfab.com/3d-models/banco-bq-513d185fd69440a28594a5ec130fc7ca?utm_medium=embed&amp;amp;utm_source=website&amp;amp;utm_campaign=share-popup&quot; target=&quot;_blank&quot; style=&quot;font-weight: bold; color: #1CAAD9;&quot;&gt;Banco Bq&lt;/a&gt;
+    by &lt;a href=&quot;https://sketchfab.com/joancalad?utm_medium=embed&amp;amp;utm_source=website&amp;amp;utm_campaign=share-popup&quot; target=&quot;_blank&quot; style=&quot;font-weight: bold; color: #1CAAD9;&quot;&gt;joancalad&lt;/a&gt;
+    on &lt;a href=&quot;https://sketchfab.com?utm_medium=embed&amp;amp;utm_source=website&amp;amp;utm_campaign=share-popup&quot; target=&quot;_blank&quot; style=&quot;font-weight: bold; color: #1CAAD9;&quot;&gt;Sketchfab&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;https://skfb.ly/6KoxL&lt;/p&gt;
+</description>
+        <pubDate>Sat, 26 Jan 2019 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/fotogrametria/2019/01/26/fotogrametria_mobil.html</link>
+        <guid isPermaLink="true">http://localhost:4000/fotogrametria/2019/01/26/fotogrametria_mobil.html</guid>
+        
+        
+        <category>fotogrametria</category>
+        
+      </item>
+    
+      <item>
+        <title>Cómo hacer una imagen 360 con Blender</title>
+        <description>&lt;p&gt;¿Por qué hacer una imagen 360 de una malla si ya tengo un modelo 3D?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Puede que nos encontremos con algún espacio en el que realizar una imagen 360 es impracticable, pero si podamos generar un modelo fotogramétrico&lt;/li&gt;
+  &lt;li&gt;Nos piden una vista o recorrido virtual del espacio que hemos generado&lt;/li&gt;
+  &lt;li&gt;Es más simple que un visor 3D. La gente está más acostumbrada a mover una 360 que un visor 3D&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;realizar-imágenes-360-con-blender-a-partir-de-una-malla&quot;&gt;Realizar imágenes 360 con Blender a partir de una malla&lt;/h3&gt;
+
+&lt;p&gt;Lo primero que tenemos que hacer es configurar la cámara con la que vamos a realizar la imagen.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Seleccionamos la cámara&lt;/li&gt;
+  &lt;li&gt;En apartado &lt;em&gt;Scene &amp;gt; Resolution&lt;/em&gt; siempre le vamos a dar el doble a la X; por ejemplo x: 2048 y: 1024&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../static/projects/360_blender/resolution.PNG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Desde el apartado &lt;em&gt;Camera&lt;/em&gt;  seleccionamos &lt;em&gt;Panoramic, Type: equirrectangular&lt;/em&gt; y escogemos una longitud focal de 8mm por ejemplo, como si se tratase un ojo de pez.
+&lt;img src=&quot;../static/img/360_blender/panoramic.PNG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Colocamos la cámara de donde queramos que se realice la imagen 360 y le damos a render&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;compartir-nuestra-imagen&quot;&gt;Compartir nuestra imagen&lt;/h3&gt;
+
+&lt;p&gt;Como ya expliqué en un post anterior &lt;a href=&quot;https://joancano.github.io/fotograf%C3%ADa/2019/01/02/360-photos.html&quot;&gt;Crear y visualizar imágenes 360&lt;/a&gt;, hay varias maneras de compartir nuestra imagen. En este caso voy a tomar el camino de publicar la image mediante &lt;a href=&quot;https://forgejs.org/#home&quot;&gt;ForgeJS&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;imagen-360&quot;&gt;&lt;a href=&quot;../static/360/projectes/banco/index.html&quot;&gt;IMAGEN 360&lt;/a&gt;&lt;/h4&gt;
+</description>
+        <pubDate>Sun, 20 Jan 2019 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/360/2019/01/20/360_Blender.html</link>
+        <guid isPermaLink="true">http://localhost:4000/360/2019/01/20/360_Blender.html</guid>
+        
+        
+        <category>360</category>
+        
+        <category>360</category>
+        
+      </item>
+    
+      <item>
+        <title>Cómo crear tiles</title>
+        <description>&lt;p&gt;Algunas veces necesitamos compartir un trabajo que hemos hecho, ya sea mediante dron, fotogrametría, o alguna capa raster que tiene un tamaño que puede hacer inviable el compartirla.&lt;/p&gt;
+
+&lt;p&gt;Es en estos casos cuando “cortar” estas imágenes u ortomosaicos puede ayudarnos a compartirlos o publicarlos de una manera más eficaz, normalmente mediante un Tile Map Server (TMS).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Tilear&lt;/em&gt; una imagen consiste básicamente en dividir en pequeños mosaicos pre-renderizados para que la carga del cliente web sea mucho más rápida.&lt;/p&gt;
+
+&lt;p&gt;Con Python y GDAL es muy sencillo, puesto que podemos dividir el ráster de entrada en la estructura que nos interesa. A continuación vamos a ver ejemplos de los que más ultilizo:&lt;/p&gt;
+
+&lt;p&gt;Un breve inciso:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;En el caso de que tengas windows has de instalar &lt;a href=&quot;https://www.gdal.org/&quot;&gt;gdal&lt;/a&gt; para windows. Luego, podrás ejecutar gdal2tiles desde la OsgeoShell o desde la carpeta donde tengas gdal2tiles.exe&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Si utilizas Linux, instálate gdal a través de tu terminal, y solo tendrás que ejecutar el mismo comando desde ella.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;ejemplos-de-uso-de-gdal2tiles&quot;&gt;Ejemplos de uso de gdal2tiles&lt;/h3&gt;
+
+&lt;h4 id=&quot;generar-un-tms-básico&quot;&gt;Generar un TMS básico&lt;/h4&gt;
+
+&lt;p&gt;Ejecuntando el siguiente comando obtendremos la estructura de &lt;a href=&quot;https://openlayers.org/&quot;&gt;Openlayers&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Linux
+gdal2tiles.py raster.tif
+
+# Windows
+gdal2tiles.exe raster.tif
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;generar-un-tms-basado-en-google&quot;&gt;Generar un TMS basado en Google&lt;/h4&gt;
+
+&lt;p&gt;Generar KML para Google Earth: predeterminado para el perfil ‘geodésico’ y ‘ráster’ en EPSG: 4326. Para un conjunto de datos con diferentes proyecciones usar con precaución!&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Linux
+gdal2tiles.py -k -p geodetic raster.tif
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;generar-un-tms-para-una-imagen-sin-coordenadas&quot;&gt;Generar un TMS para una imagen SIN coordenadas&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Linux
+gdal2tiles.py -p raster image.jpg
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Tue, 15 Jan 2019 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/gis/2019/01/15/tiles.html</link>
+        <guid isPermaLink="true">http://localhost:4000/gis/2019/01/15/tiles.html</guid>
+        
+        
+        <category>gis</category>
+        
+      </item>
+    
+      <item>
+        <title>Cómo hacer imágenes Gigapíxel</title>
+        <description>&lt;p&gt;La curiosidad de esta semana ha sido cómo hacer imágenes Gigapíxel..&lt;/p&gt;
+
+&lt;p&gt;En el último post que escribí, hablaba sobre cómo hacer imágenes 360. Hacer imágenes Gigapixel no es muy diferente.&lt;/p&gt;
+
+&lt;p&gt;El primer paso es hacer las fotos, pero ¿cómo?. Si os acordáis, para hacer las imágenes para la 360, debíamos tener un % de solape entre imágenes, además de cubrir toda la esfera.&lt;/p&gt;
+
+&lt;p&gt;El proceso para realizar la gigapíxel es similar. Si disponemos de una cámara con un objetivo 14-70mm, debemos tomar las fotos con la máxima distancia focal, en este caso 70mm. Es decir, tomaremos TODAS las imágenes con la mayor longitud focal posible, o decidiremos la &lt;em&gt;f&lt;/em&gt; según el nivel de detalle que queramos obtener.&lt;/p&gt;
+
+&lt;p&gt;En este momento en el que ya sepamos cómo disparar las fotos, tenemos dos vías disponibles para ayudar a conseguir nuestras imágenes y que no se nos quede ningún hueco en la imagen final:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;La primera opción es disparar manualmente, por lo que se trata de hacer un rompecabezas de nuestra imagen final, por ejemplo eligiendo dos puntos que actúen de principio y fin (tanto longitudinal como latitudinalmente).&lt;/li&gt;
+  &lt;li&gt;Comprar un brazo robótico que dispare y coloque la cámara por nosotros.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;El siguiente paso sería construir la gigapixel, por lo que podríamos seguir los mismos pasos que se utilizaron en el post anterior &lt;a href=&quot;https://joancano.github.io/fotografía/2019/01/02/360-photos.html&quot;&gt;cómo hacer fotos 360&lt;/a&gt;, pero en cambio de elegir una proyección cilíndrica elegiríamos la plana.&lt;/p&gt;
+
+&lt;p&gt;El último paso sería compartir la imagen. Como se trata de una imagen lateralmente muy ancha necesitaremos un visor que nos permita movernos a través de ella, y fluidamente.&lt;/p&gt;
+
+&lt;p&gt;He probado muchos software.. ¡MUCHOS! estando la mayoría de ellos descontinuados. Recomiendo 2:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;GDAL + Leaflet (opción Open Source)&lt;/li&gt;
+  &lt;li&gt;Panotour (comercial)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para utilizar GDAL y Leaflet en Linux, instalaremos GDAL:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ sudo apt install gdal-bin&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Una vez que tengamos GDAL instalado, debemos ejecutar en el terminal el comando:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ gdal2tiles -p raster ourImage.jpg ourDestinyFolder&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Y ya tendremos nuestro visor !!&lt;/p&gt;
+
+&lt;p&gt;Para que GDAL cree un html con Leaflet y no OL automáticamente, incluir &lt;em&gt;-l&lt;/em&gt; :&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gdal2tiles.py -l -p raster ourImage.jpg ourDestinyFolder&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Todavía no entiendo el por qué, pero cuando he procesado los formatos png y tiff, el resultado ha sido inesperado, me genera los tiles con cambios cromáticos. Por lo que recomiendo procesar este tipo de imágenes sin ningún tipo de sistema de coordenadas y en formato jpg!&lt;/p&gt;
+
+&lt;p&gt;Pd: aquí algunos de los visores hechos:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://files.tecnitop.com/usuarios/joan/wordpress/tourMP.html&quot;&gt;A partir de malla&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;../static/gigaBernia/gp_bernia.html&quot;&gt;Gigapixel de la Serra de Bèrnia&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 11 Jan 2019 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/fotografia/2019/01/11/gigapixel.html</link>
+        <guid isPermaLink="true">http://localhost:4000/fotografia/2019/01/11/gigapixel.html</guid>
+        
+        
+        <category>fotografia</category>
+        
+      </item>
+    
+      <item>
+        <title>Cómo hacer visores con Panellum</title>
+        <description>&lt;p&gt;Tenemos que tener 4 archivos. Entre ellos están el JS y CSS que se deben descargar de la &lt;a href=&quot;https://pannellum.org/&quot;&gt;página web&lt;/a&gt;. El html lo tenemos que construir nosotros y como no, la imagen también ;).&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;panellum.html&lt;/li&gt;
+  &lt;li&gt;panellum.js&lt;/li&gt;
+  &lt;li&gt;panellum.css&lt;/li&gt;
+  &lt;li&gt;imagen&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe width=&quot;800&quot; height=&quot;500&quot; src=&quot;../static/panos/panellum.html&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Y este sería el código html, fijaros en el contenedor ‘panorama’:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;http-equiv=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X-UA-Compatible&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;IE=edge&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width=device-width, initial-scale=1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;author&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;joan&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Guate&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;pannellum.css&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+     &lt;span class=&quot;nt&quot;&gt;&amp;lt;style&amp;gt;&lt;/span&gt;
+     &lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+       &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+       &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+       &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;#panorama&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;pannellum.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;panorama&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
+		  &lt;span class=&quot;nx&quot;&gt;pannellum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;viewer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'panorama'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;s2&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;equirectangular&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+			&lt;span class=&quot;s2&quot;&gt;&quot;title&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Escuelita&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+			&lt;span class=&quot;s2&quot;&gt;&quot;author&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Joan Cano&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;s2&quot;&gt;&quot;panorama&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;pano2.jpg&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+			&lt;span class=&quot;s2&quot;&gt;&quot;compass&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+			&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Fri, 04 Jan 2019 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/fotografia/2019/01/04/simplePanos.html</link>
+        <guid isPermaLink="true">http://localhost:4000/fotografia/2019/01/04/simplePanos.html</guid>
+        
+        
+        <category>fotografia</category>
+        
+      </item>
+    
+      <item>
+        <title>Crear y visualizar imágenes 360</title>
+        <description>&lt;p&gt;Las vacaciones a vaces aburren y dan mucho para pensar, en este caso me dió por las imágenes 360, para una biblioteca personal, quizás un trabajo, por que tenía que sacarle partido a un Parrot Anafi.&lt;/p&gt;
+
+&lt;p&gt;Después unas búsquedas, tenía algunas dudas:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;¿Qué software necesitaría?&lt;/li&gt;
+  &lt;li&gt;Código libre / o gratuita.&lt;/li&gt;
+  &lt;li&gt;Buenos resultados en el stitching y calidad en la foto final.&lt;/li&gt;
+  &lt;li&gt;¿A futuro? Por ejemplo las visitas virtuales.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Entonces, estos fueron los programas que revisé:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stitchpanorama.sourceforge.net/&quot;&gt;Stitch Panorama: a GIMP Plug-in&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://hugin.sourceforge.net/&quot;&gt;Hugin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.shallowsky.com/software/pandora/&quot;&gt;Pandora: a GIMP Plugin for Making Panoramas&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://es.shop.gopro.com/EMEA/softwareandapp/gopro-fusion-studio-app/fusion-studio.html&quot;&gt;/gopro-fusion-studio&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wiki.panotools.org/Main_Page&quot;&gt;panotools&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forgejs.org/&quot;&gt;ForgeJS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.kolor.com/panotour-viewer-download/&quot;&gt;Panotour Viewer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.gigapan.com/cms/support/download-gigapan-stitch&quot;&gt;Gigapan&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.ptgui.com/&quot;&gt;PTGui&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://webuser.hs-furtwangen.de/~dersch/PTStitcherNG/PTStitcherNG0.4.html&quot;&gt;PTsticherNG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pannellum.org/&quot;&gt;Panellum&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;La mejor opción de código abierto fue &lt;a href=&quot;http://hugin.sourceforge.net/&quot;&gt;Hugin&lt;/a&gt;, por supuesto, pero Hugin software tiene un ligero problema cuando quieres ir rápido o no gastar demasiado tiempo o porque eres un poco vago. El problema es que la mayoría de las veces tienes que poner el puntos de control, aburrido no?&lt;/p&gt;
+
+&lt;p&gt;Entonces, estuve revisando el software comercial. Parece que una de las mejores opciones es Autopano, pero también tiene un problema … no es gratis, y desde 2018 no se mantendrá.&lt;/p&gt;
+
+&lt;p&gt;¡¡Pero hay una solución!!&lt;/p&gt;
+
+&lt;p&gt;Autopano, en su versión gratuita puede alinear las imágenes, y es REALMENTE BUENO, ¡incluso puede exportar la alineación en el formato de Hugin!&lt;/p&gt;
+
+&lt;p&gt;Entonces solo se tiene que exportar el formato con el que trabaja hugin y procesar la foto 360 en Hugin sin perder resolución.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../static/img/img360/detectar.png&quot; alt=&quot;000&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../static/img/img360/align.png&quot; alt=&quot;000&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../static/img/img360/panotools.png&quot; alt=&quot;000&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../static/img/img360/file.png&quot; alt=&quot;000&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../static/img/img360/salida.png&quot; alt=&quot;000&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Después de crear la imagen 360, el siguiente paso es publicar o compartir la imagen, pero no encontré un repositorio que me gustase o fuese totalmente libre … Entonces, por qué no crear nuestro propio repositorio :), ¿cómo? Con la ayuda de Github o Gitlab.&lt;/p&gt;
+
+&lt;p&gt;Luego, podemos usar el siguiente software y cargarlo a Github: &lt;a href=&quot;https://forgejs.org&quot;&gt;ForgeJS&lt;/a&gt;, que solo tenemos que descargar, seleccionar el tipo de proyecto que queremos y luego cambiar el código del &lt;em&gt;config.json&lt;/em&gt; por alguno de los proyectos de la carpeta &lt;em&gt;/samples/projects/&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Este es el resultado:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;../static/360/projectes/serrella/index.html&quot;&gt;Serrella&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;../static/360/projectes/castellet/index.html&quot;&gt;Castellet&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;../static/360/projectes/polop/index.html&quot;&gt;Polop&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Y esto, los archivos que subo a Github:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../static/img/img360/forge.png&quot; alt=&quot;000&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can check the project &lt;a href=&quot;https://github.com/JoanCano/joancano.github.io/tree/master/_site/360&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 02 Jan 2019 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/fotografia/2019/01/02/360-photos.html</link>
+        <guid isPermaLink="true">http://localhost:4000/fotografia/2019/01/02/360-photos.html</guid>
+        
+        
+        <category>fotografia</category>
+        
+      </item>
+    
+      <item>
+        <title>Crear y visualizar nubes de puntos 3D con Potree!</title>
+        <description>&lt;p&gt;En el siguiente post se pretende mostrar una potente herramienta open source con la cual es realmente sencillo visualizar y servir nubes de puntos desde nuestro navegador.&lt;/p&gt;
+
+&lt;h2 id=&quot;qué-es-potree&quot;&gt;¿Qué es Potree?&lt;/h2&gt;
+&lt;p&gt;A grandes rasgos, &lt;a href=&quot;www.potree.org&quot;&gt;Potree&lt;/a&gt; se trata de un software de código abierto basado en WebGL, capaz de renderizar grandes nubes de puntos.&lt;/p&gt;
+
+&lt;p&gt;En su &lt;a href=&quot;www.potree.org&quot;&gt;página web&lt;/a&gt; se pueden comprobar varios ejemplos de nubes de puntos obtenidas por fotogrametría o escáner.&lt;/p&gt;
+
+&lt;p&gt;Está diseñado para trabajar con nubes de puntos en formato LAS, por lo que en el caso de que queramos transformar una nube de puntos, por ejemplo obtenida por fotogrametría, ésta la tendremos que transformar previamente a LAS para poder transformar la nube de puntos al formato con el que trabaja Potree (octrees).&lt;/p&gt;
+
+&lt;h2 id=&quot;descarga-del-software&quot;&gt;Descarga del software&lt;/h2&gt;
+
+&lt;p&gt;Para proceder a utilizar Potree, descargaremos el software para convertir el formato LAS a los octrees con los que trabaja Potree &amp;gt; &lt;a href=&quot;https://github.com/potree/PotreeConverter/releases&quot;&gt;https://github.com/potree/PotreeConverter/releases&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;En la página se encuentra PotreeConverter, que se trata del conversor de LAS a octrees y el software en sí (source code). Sin embargo, solo nos hará falta PotreeConverter.&lt;/p&gt;
+
+&lt;h2 id=&quot;cómo-ejecutarlo&quot;&gt;Cómo ejecutarlo&lt;/h2&gt;
+
+&lt;p&gt;Antes de empezar, conviene instalar un servidor web para poder visualizar la nube de puntos sin tener que subirla a un servidor como tal.&lt;/p&gt;
+
+&lt;p&gt;Como “simulador” de servidor web se utilizará &lt;a href=&quot;https://www.apachefriends.org/de/index.html&quot;&gt;Xampp&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Una vez se tiene todo descomprimido e instalado, se procede a transformar la nube de puntos. Para ello, se abre el cmd y se escribe la siguiente línea de código.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./PotreeConverter.exe C:/pointcloud.las -o C:/xampp/htdocs/potree --generate-page pageName
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Donde:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;./PotreeConverter.exe&lt;/code&gt; se trata del ejecutable que se ha descargado.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;C:/pointcloud.las&lt;/code&gt; es la nube de puntos que queremos transformar.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;C:/xampp/htdocs/potree&lt;/code&gt; es la ruta donde se va a guardar.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;pageName&lt;/code&gt; Es el nombre que le asignaremos al archivo de salida&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Queda claro que las rutas pueden variar según dónde hayamos colocado los archivos.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Una vez se ejecute nos debe aparecer una ventana como la siguiente, la cual indica que el proceso se está realizando.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../static/img/imgPotree/resultado.png&quot; alt=&quot;CMD&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cuando se haya realizado el proceso, es muy importante que los archivos generados se encuentren dentro de &lt;code class=&quot;highlighter-rouge&quot;&gt;C:\xampp\htdocs&lt;/code&gt; para poder visualizar la nube de puntos en el navegador:&lt;/p&gt;
+
+&lt;p&gt;De manera que solo quedará abrir y visualizar la nube de puntos desde una ruta similar a la siguiente:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://localhost/potree/pageName.html&quot;&gt;http://localhost/potree/pageName.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;una-pequeña-contribución&quot;&gt;Una pequeña contribución&lt;/h2&gt;
+
+&lt;p&gt;Abrir la consola puede paracer algo tedioso, por lo que se ha creado el siguiente &lt;a href=&quot;https://github.com/JoanCano/potreeGUI/blob/master/PotreeConverter.exe&quot;&gt;ejecutable&lt;/a&gt; para evitar tener que escribir en la consola de Windows.&lt;/p&gt;
+
+&lt;p&gt;Al ejecutar potreGUI nos aparecen las siguientes ventanas:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Nos pregunta que nombre le damos al archivo&lt;/li&gt;
+  &lt;li&gt;El archivo LAS que queremos transformar&lt;/li&gt;
+  &lt;li&gt;El directorio donde queremos guardarlo (C:\xampp\htdocs)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;../static/img/imgPotree/1.PNG&quot; alt=&quot;nombre&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../static/img/imgPotree/2.png&quot; alt=&quot;LAS&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../static/img/imgPotree/3.png&quot; alt=&quot;Guardar&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;ejemplo-práctico-con-una-nube-de-puntos-lidar-del-pnoa&quot;&gt;Ejemplo práctico con una nube de puntos LiDAR del PNOA&lt;/h2&gt;
+
+&lt;p&gt;Para mostrar el resultado que puede obtenerse con una nube de puntos LAS, se han utilizado 6 hojas LiDAR-PNOA que a su vez han sido unidas en CloudCompare.&lt;/p&gt;
+
+&lt;p&gt;Aquí tenéis el resultado. Suerte!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../static/img/imgPotree/resultado2.PNG&quot; alt=&quot;CMD&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 13 Jan 2018 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/modelos3d/2018/01/13/potree.html</link>
+        <guid isPermaLink="true">http://localhost:4000/modelos3d/2018/01/13/potree.html</guid>
+        
+        
+        <category>modelos3D</category>
+        
+      </item>
+    
+      <item>
+        <title>Cómo instalar OpenDroneMap</title>
+        <description>&lt;p&gt;En primer lugar, para trabajar con ODM, será necesario instalar previamente Docker,
+ya que ODM corre a través de Docker.&lt;/p&gt;
+
+&lt;p&gt;Instalar Docker es muy sencillo, con los siguientes pasos (para Ubuntu 16.04, en el
+caso de que tengas otra versión dirígete a la &lt;a href=&quot;https://docs.docker.com/engine/installation/linux/docker-ee/ubuntu/&quot;&gt;página oficial&lt;/a&gt;).&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Actualizamos&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get update
+
+&lt;span class=&quot;c&quot;&gt;# Instalamos Docker&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install docker.io
+
+&lt;span class=&quot;c&quot;&gt;# Comprobamos que está instalado&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;docker run hello-world
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Una vez tenemos Dockers instalado, para conseguir tener WebODM nos hará falta Python y Git.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install python
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;instalación-de--webodm&quot;&gt;Instalación de  WebODM&lt;/h3&gt;
+
+&lt;p&gt;Descarga WebODM de &lt;a href=&quot;https://github.com/OpenDroneMap/WebODM&quot;&gt;https://github.com/OpenDroneMap/WebODM&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Entra a la carpeta y ejecútalo&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;WebODM
+./webodm.sh start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Listo!&lt;/strong&gt;
+&lt;img src=&quot;../static/img/odm.png&quot; alt=&quot;WebODM&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 28 Nov 2017 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/fotogrametria/2017/11/28/ODM.html</link>
+        <guid isPermaLink="true">http://localhost:4000/fotogrametria/2017/11/28/ODM.html</guid>
+        
+        
+        <category>fotogrametria</category>
+        
+      </item>
+    
+      <item>
+        <title>Cómo realizar un suavizado de datos con el filtro Savitzky-Golay y R</title>
+        <description>&lt;p&gt;El filtro &lt;em&gt;Savitzky-Golay&lt;/em&gt; se utiliza normalmente para el suavizado de datos, ajustando un polinomio con al menos k+1 puntos equidistantes para determinar el nuevo valor de cada punto.&lt;/p&gt;
+
+&lt;p&gt;En teledetección, cuando se trabaja con firmas espectrales se suele utilizar este filtro por conservar las características de la distribución inicial, los máximos y mínimos relativos y el ancho entre picos. El filtro simula una ventana que se desliza por los datos, suavizándolos a partir de los datos de la ventana.&lt;/p&gt;
+
+&lt;p&gt;Para poder emplearlo en &lt;a href=&quot;https://cran.r-project.org/&quot;&gt;R&lt;/a&gt;, necesitaremos el paquete &lt;code class=&quot;highlighter-rouge&quot;&gt;signal&lt;/code&gt;, el cual contiene funciones de procesamiento compatibles con &lt;em&gt;Matlab/Octvave&lt;/em&gt;, como filtros, funciones de filtrado, visualización de modelos de filtros, interpolación, etc. Las funciones que se van a emplear son:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;sgolay&lt;/em&gt;, para calcular los coeficientes.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;filter&lt;/em&gt;, para aplicar los coeficientes a los datos, con un ajuste de mínimos cuadrados (cuadrado de las diferencias entre los valores calculados y observados).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;cómo-establecer-los-parámetros-de-filtrado&quot;&gt;Cómo establecer los parámetros de filtrado&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;p&lt;/code&gt;  es el orden del polinomio. Si es alto, gestiona mejor los rasgos espectrales estrechos, pero suaviza menos los anchos.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;n&lt;/code&gt; es la longitud del filtro (siempre impar). Entre 1 y 2 la anchura del rasgo m?s estrecho en los datos.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;m&lt;/code&gt; devuelve la derivada de los coeficientes de filtrado&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ts&lt;/code&gt; es el factor de escala de tiempo&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;establecer-el-directorio-de-trabajo&quot;&gt;Establecer el directorio de trabajo&lt;/h4&gt;
+
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Directorio de trabajo&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setwd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/home/joan/TRATAMIENTO/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;cargar-los-datos-y-crear-un-df&quot;&gt;Cargar los datos y crear un DF&lt;/h4&gt;
+
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read.csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;FIRMAS_REF.csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sep&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;,&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dec&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;,&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Nótese que se transforman los vectores a factores, de lo contrario el filtro no funcionará&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data.frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stringsAsFactors&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;visualizamos-las-gráficas-para-determinar-la-n&quot;&gt;Visualizamos las gráficas para determinar la &lt;em&gt;n&lt;/em&gt;&lt;/h4&gt;
+
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Firma_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;l&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Gr?fica firma 1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xlab&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;wavelength&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ylab&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Reflectividad&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;../static/img/firma1.png&quot; alt=&quot;plot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Se escoge el ancho de entre la longitud de onda &lt;code class=&quot;highlighter-rouge&quot;&gt;737 - 748&lt;/code&gt; como rasgo más estrecho, de manera que su doble nos da una &lt;strong&gt;n de 21&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;#install.packages(&quot;signal&quot;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;signal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Calcular los coeficientes de filtro&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sg&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sgolay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Se aplica el filtro con los coeficientes a nuestros datos&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;signal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Firma_1sg&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Firma_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Visualizamos el resultado&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ggplot2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plotsg&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ggplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;geom_point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;aes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Firma_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;geom_line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;aes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Firma_1sg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;red2&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xlab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Wavelength&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ylab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Reflectancia&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;theme_light&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plotsg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;../static/images/golay.png&quot; alt=&quot;golay&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Exportamos como DF&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dfsg&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data.frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Firma_1sg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write.csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dfsg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;firmas_SG.csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Sat, 11 Nov 2017 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/r/2017/11/11/sGolay.html</link>
+        <guid isPermaLink="true">http://localhost:4000/r/2017/11/11/sGolay.html</guid>
+        
+        
+        <category>R</category>
+        
+      </item>
+    
+      <item>
+        <title>¿Cómo crearte un blog personal con Jekyll?</title>
+        <description>&lt;p&gt;Hay muchas posibilidades para la creación de blogs personales, siendo Wordpress o Blogspot de los más utilizados, sin embargo, ¡hay alternativas!.&lt;/p&gt;
+
+&lt;p&gt;Una de las que más me gusta es &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;, aunque &lt;a href=&quot;https://themes.gohugo.io/&quot;&gt;Hugo&lt;/a&gt; también es una buena opción. Jekyll es a grandes rasgos un generador de páginas web estáticas, con una serie de ventajas que lo diferencias de otros modos de hacerte un blog:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;La facilidad de edición de nuevos post mediante lenguaje markdown (en algún editor de escritorio como Atom o Haroopad), o a partir de otros editores web como &lt;a href=&quot;http://prose.io/&quot;&gt;prose.io&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Tiene una rápida y fácil instalación que más abajo se detalla&lt;/li&gt;
+  &lt;li&gt;Gran cantidad de &lt;a href=&quot;http://jekylltheme.org/&quot;&gt;temas/plantillas predefinidas&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;La posibilidad de alojarlo en páginas como Github o Gitlab, permitiendo tener un espacio en la web&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;En el caso de que queramos visualizar el resultado de nuestro blog, podemos montar Jekyll en nuestro ordenador (con linux) o servidor. Por otro lado, si el destino del blog es subirlo a github, no hace falta realizar este paso, tan solo hay que modificar los archivos necesarios y subir tus nuevos posts en formato markdown.&lt;/p&gt;
+
+&lt;h3 id=&quot;pre-instalación-jekyll-requisitos&quot;&gt;Pre-instalación Jekyll. Requisitos&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Un SO GNU/Linux o macOS&lt;/li&gt;
+  &lt;li&gt;Tener instalado git&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;La versión de Ruby 2.1 o superior&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install ruby ruby-dev make gcc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;Las RubyGems. Si no tienes las RubyGems instaladas, puedes hacerlo manualmente descargándolas desde esta &lt;a href=&quot;https://rubygems.org/pages/download#formats&quot;&gt;página&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Entrar (cd) a la carpeta descargada y descomprimida y ejecutar&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ruby setup.rb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;En el caso de que las tengas, únicamente actualízalas:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Tienes que ser administrador o root&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem update &lt;span class=&quot;nt&quot;&gt;--system&lt;/span&gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Comprueba que GCC y Make se han instalado&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gcc &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
+make &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;instalación-de-jekyll&quot;&gt;Instalación de Jekyll&lt;/h2&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Instalación de Jekyll&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem install jekyll bundler
+
+&lt;span class=&quot;c&quot;&gt;# Comprobar si se ha instalado bien&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll &lt;span class=&quot;nt&quot;&gt;--version&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem list jekyll
+
+&lt;span class=&quot;c&quot;&gt;# Comprobar si bundle está instalado&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle update jekyll
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;descargar-repositorios-y-realizar-cambios&quot;&gt;Descargar repositorios y realizar cambios&lt;/h3&gt;
+
+&lt;p&gt;A modo de ejemplo voy a simular que descargo el repositorio donde tengo alojado mi blog, el cual es un fork de uno de los muchos temas de Jekyll.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/JoanCano/joancano.github.io.git
+
+&lt;span class=&quot;c&quot;&gt;# Entraría a la carpeta del blog&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;joancano.io/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;En este punto es cuando crearíamos el nuevo post dentro de la carpeta &lt;code class=&quot;highlighter-rouge&quot;&gt;_post&lt;/code&gt;, donde guardaremos las nuevas publicaciones. Estas deben deben seguir el siguiente formato:  &lt;code class=&quot;highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.md&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;La carpeta &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; es donde se generarán los nuevos post una vez sean transformados por Jekyll.&lt;/p&gt;
+
+&lt;p&gt;Cada post empezará de la siguiente manera, escrito en markdown:&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#!markdown&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;post&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Welcome&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Jekyll!&quot;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;   &lt;span class=&quot;s&quot;&gt;2015-11-17 16:16:01 -0600&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jekyll update&lt;/span&gt;
+&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;visualización-del-blog&quot;&gt;Visualización del blog&lt;/h3&gt;
+
+&lt;p&gt;Como se ha descargado el blog desde Github, lo primero será iniciar el repositorio en git.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;joancano.github.io
+git init
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Jekyll también viene con un servidor de desarrollo incorporado que te permitirá previsualizarlo cómo en tu navegador localmente.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;En caso de que no nos permita visualizarlo, es por los permisos del navegador. Tenemos que activar el puerto 4000.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo ufw allow 4000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Ya tenemos nuestro blog corriendo en &lt;a href=&quot;http://localhost:4000/joancano.github.io/&quot;&gt;local&lt;/a&gt;!. Ahora solo tendremos que subirlo a Github para poder tener nuestro blog en la web.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 21 Oct 2017 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/jekyll/2017/10/21/makeYourownBlog.html</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll/2017/10/21/makeYourownBlog.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+      </item>
+    
+  </channel>
+</rss>

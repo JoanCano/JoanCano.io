@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/static/img/favicon.ico" />
+    <title>Obtención de datos mediante HTTP-API de la cámara Parrot Sequoia - Blog</title>
+    <meta name="author" content="Joan Cano" />
+    <meta name="description" content="Obtención de datos mediante HTTP-API de la cámara Parrot Sequoia" />
+    <meta name="keywords" content="Obtención de datos mediante HTTP-API de la cámara Parrot Sequoia, Blog, remote_sensing" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+    <meta content="1749788565247320" property="fb:app_id">
+    <meta content="Blog" property="og:site_name">
+
+    
+
+    
+      <meta content="Obtención de datos mediante HTTP-API de la cámara Parrot Sequoia" property="og:title">
+      <meta content="article" property="og:type">
+    
+
+    
+      <meta content="Bienvenido a mi espacio web personal" property="og:description">
+    
+
+    
+      <meta content="http://localhost:4000/remote_sensing/2017/08/13/conexion-Sequoia.html" property="og:url">
+    
+
+    
+      <meta content="2017-08-13T00:00:00+02:00" property="article:published_time">
+      <meta content="http://localhost:4000/about/" property="article:author">
+    
+
+    
+      <meta content="http://localhost:4000/static/img/avatar.jpg" property="og:image">
+    
+
+    
+      
+        <meta content="remote_sensing" property="article:section">
+      
+    
+
+    
+      
+    
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@Joan_C_A">
+    <meta name="twitter:creator" content="@Joan_C_A">
+
+    
+      <meta name="twitter:title" content="Obtención de datos mediante HTTP-API de la cámara Parrot Sequoia">
+    
+
+    
+      <meta name="twitter:url" content="http://localhost:4000/remote_sensing/2017/08/13/conexion-Sequoia.html">
+    
+
+    
+      <meta name="twitter:description" content="Bienvenido a mi espacio web personal">
+    
+
+    
+
+    <!-- Font awesome icons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/static/css/syntax.css">
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300italic,300,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/super-search.css">
+    <link rel="stylesheet" href="/static/css/thickbox.css">
+    <link rel="stylesheet" href="/static/css/projects.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+
+    
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-sm-3">
+        <div class="fixed-condition">
+          <a href="/"><img class="profile-avatar" src="/static/img/avatar.jpg" height="75px" width="75px" /></a>
+          <h1 class="author-name">Joan Cano</h1>
+          
+            <div class="profile-about">
+              Geógrafo especializado en GIS y Teledetección. Geoinquieto.
+            </div>
+          
+          <div class="social">
+            <ul>
+              
+                <li><a href="https://www.facebook.com/joan.canoaladid" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              
+                <li><a href="https://twitter.com/Joan_C_A" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              
+                <li><a href="https://www.linkedin.com/in/joan-cano-aladid-122835b4/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+              
+                <li><a href="#" target="_blank"><i class="fa fa-stack-exchange"></i></a></li>
+              
+                <li><a href="https://github.com/JoanCano" target="_blank"><i class="fa fa-github"></i></a></li>
+              
+            </ul>
+          </div>
+          <div class="search" id="js-search">
+            <input type="text" placeholder="(sitemap)~$ type to search" class="search__input form-control" id="js-search__input">
+            <ul class="search__results" id="js-search__results"></ul>
+          </div>
+          <hr />
+          <ul class="sidebar-nav">
+            <strong>Navigation</strong>
+            <li><a href="/">Home</a></li>
+            
+              <li><a class="about" href="/about/">About Me</a></li>
+            
+              <li><a class="about" href="/projects/">My Projects</a></li>
+            
+              <li><a class="about" href="/feed.xml">XML Feed</a></li>
+            
+          </ul>
+        </div>
+        <!-- end /.fixed-condition -->
+      </div>
+      <div class="col-sm-8 col-offset-1 main-layout">
+        <header class="post-header">
+  <h1 class="post-title">Obtención de datos mediante HTTP-API de la cámara Parrot Sequoia</h1>
+</header>
+
+<span class="time">13 Aug 2017</span>
+
+  <span class="categories">
+    &raquo; <a href="/category/remote_sensing">remote_sensing</a>
+  </span>
+
+
+<div class="content">
+  <div class="post"><p>A continuación, muestro una manera sencilla de conectarse y exportar datos del sensor <em>Sunshine</em>.</p>
+
+<h3 id="los-interfaces-de-la-sequoia">Los interfaces de la Sequoia</h3>
+<ul>
+  <li>HTTP-API</li>
+  <li>PTP (Picture Transfer Protocol)</li>
+</ul>
+
+<h4 id="vía-http-control-api">Vía HTTP Control API</h4>
+
+<p>Los datos son devueltos en formato json, a través de peticiones a la siguiente dirección:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>192.168.47.1
+</code></pre></div></div>
+
+<p>Las diferentes URLs a las que podemos acceder son:</p>
+
+<ul>
+  <li><strong>/capture</strong>: para obtener el estado de captura Sequoia, iniciar y detener una captura</li>
+  <li><strong>/config</strong>: para obtener y configurar la configuración de las cámaras</li>
+  <li><strong>/status</strong>: para obtener todas las informaciones sobre el estado físico de Sequoia</li>
+  <li><strong>/calibration</strong>: para obtener el estado de calibración, iniciar y detener una calibración</li>
+  <li><strong>/storage</strong>: para obtener información sobre la memoria</li>
+  <li><strong>/file</strong>: para obtener información de archivos y carpetas</li>
+  <li><strong>/download</strong>: para descargar archivos</li>
+  <li><strong>/delete</strong>: para eliminar archivos y carpetas</li>
+  <li><strong>/version</strong>: para obtener el número de serie y la versión del software</li>
+  <li><strong>/wifi</strong>: para obtener el SSID Sequoia</li>
+  <li><strong>/manualmode</strong>: para obtener y establecer la ISO y la exposición manualmente</li>
+  <li><strong>/websocket</strong>: para usar notificaciones de websocket en eventos asincrónicos</li>
+</ul>
+
+<h3 id="intercambio-de-datos-de-interés">Intercambio de datos de interés</h3>
+
+<h4 id="status">/status</h4>
+
+<ul>
+  <li>SOLICITUD HTTP: http://192.168.47.1/status</li>
+  <li>Esta URL proporciona información sobre el estado físico de la Sequoia. Se devolverán las siguientes informaciones:
+    <ul>
+      <li>request</li>
+      <li>gps</li>
+      <li>instruments</li>
+      <li>sunshine</li>
+      <li>temperature &gt; http://192.168.47.1/status/sunshine</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">sequoia_ip</span> <span class="o">=</span> <span class="s">'192.168.47.1'</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://'</span> <span class="o">+</span> <span class="n">sequoia_ip</span> <span class="o">+</span> <span class="s">'/status'</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">(),</span> <span class="n">indent</span> <span class="o">=</span> <span class="mi">4</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h4 id="data">Data</h4>
+<p>Las siguientes líneas de código son en el software R. Mediante la librería rjson podremos leer de una forma más elegante y estructurada el json que nos devuelve el sensor <em>Sunshine</em>.</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">rjson</span><span class="p">)</span><span class="w">
+</span><span class="n">statusValues</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">fromJSON</span><span class="p">(</span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"~/Escritorio/Datos_Sequoia/status.json"</span><span class="p">)</span><span class="w">
+</span><span class="n">print</span><span class="p">(</span><span class="n">statusValues</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="destapado">Destapado</h4>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sunshineValuesOn</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">fromJSON</span><span class="p">(</span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"~/Escritorio/Datos_Sequoia/sunhineOn.json"</span><span class="p">)</span><span class="w">
+</span><span class="n">print</span><span class="p">(</span><span class="n">sunshineValuesOn</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="tapado">Tapado</h4>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sunshineValuesOff</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">fromJSON</span><span class="p">(</span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"~/Escritorio/Datos_Sequoia/sunhineOff.json"</span><span class="p">)</span><span class="w">
+</span><span class="n">print</span><span class="p">(</span><span class="n">sunshineValuesOff</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="creamos-un-dataframe">Creamos un DataFrame</h2>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">json</span><span class="w"> </span><span class="o">&lt;-</span><span class="nf">list</span><span class="p">(</span><span class="n">sunshineValuesOn</span><span class="p">,</span><span class="w"> </span><span class="n">sunshineValuesOff</span><span class="p">)</span><span class="w">
+</span><span class="n">json_df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">json</span><span class="p">)</span><span class="w">
+</span><span class="n">print</span><span class="p">(</span><span class="n">json_df</span><span class="p">)</span><span class="w">
+</span><span class="n">write.table</span><span class="p">(</span><span class="n">json_df</span><span class="p">,</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"~/Escritorio/json.csv"</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">","</span><span class="p">,</span><span class="w"> </span><span class="n">dec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">","</span><span class="w"> </span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+</div>
+  <div class="share-page">
+  <span style="float: left;">Share this on &rarr;&nbsp;&nbsp;</span>
+
+  <!-- Twitter -->
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="Joan_C_A">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+  <!-- Facebook -->
+  <div class="fb-share-button" data-href="http://localhost:4000/remote_sensing/2017/08/13/conexion-Sequoia.html" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>
+</div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=1749788565247320";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+</div>
+
+
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+            
+            <div class="panel-body">
+              <h4>Related Posts</h4>
+              <ul>
+            
+                <li class="relatedPost">
+                  <a href="http://localhost:4000/remote_sensing/2017/09/01/decode.html">Lectura y decodificación de los metadatos en imágenes de la cámara Sequoia</a>
+                  
+                    (Categories: <a href="/category/remote_sensing">remote_sensing</a>)
+                  
+                </li>
+          
+          
+        
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+  
+  </ul>
+</div>
+
+
+<div class="PageNavigation">
+  
+    <a class="prev" href="/osm/2016/10/06/post-guate.html">&laquo; Pequeñas aventuras</a>
+  
+  
+    <a class="next" href="/remote_sensing/2017/09/01/decode.html">Lectura y decodificación de los metadatos en imágenes de la cámara Sequoia &raquo;</a>
+  
+</div>
+
+<div class="disqus-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var disqus_shortname = "jcano";
+    var disqus_identifier = "http://localhost:4000_Obtención de datos mediante HTTP-API de la cámara Parrot Sequoia";
+    var disqus_title = "Obtención de datos mediante HTTP-API de la cámara Parrot Sequoia";
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    /* ]]> */
+  </script>
+</div>
+
+        <footer>
+          &copy; Joan Cano
+          
+            - <a href="https://github.com/JoanCano">https://github.com/JoanCano</a> - Powered by Jekyll.
+          
+          <div class="btn-github" style="float:right;">
+            <iframe src="https://ghbtns.com/github-btn.html?user=agusmakmun&repo=agusmakmun.github.io&type=star&count=true" frameborder="0" scrolling="0" width="85" height="20px"></iframe>
+            <iframe src="https://ghbtns.com/github-btn.html?user=agusmakmun&repo=agusmakmun.github.io&type=fork&count=true" frameborder="0" scrolling="0" width="85" height="20px"></iframe>
+          </div>
+        </footer>
+      </div>
+      <!-- end /.col-sm-8 -->
+    </div>
+    <!-- end /.container -->
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/super-search.js"></script>
+    <script src="/static/js/thickbox-compressed.js"></script>
+    <script src="/static/js/projects.js"></script>
+  </body>
+</html>
+

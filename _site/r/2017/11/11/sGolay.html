@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/static/img/favicon.ico" />
+    <title>Cómo realizar un suavizado de datos con el filtro Savitzky-Golay y R - Blog</title>
+    <meta name="author" content="Joan Cano" />
+    <meta name="description" content="Cómo realizar un suavizado de datos con el filtro Savitzky-Golay y R" />
+    <meta name="keywords" content="Cómo realizar un suavizado de datos con el filtro Savitzky-Golay y R, Blog, R" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+    <meta content="1749788565247320" property="fb:app_id">
+    <meta content="Blog" property="og:site_name">
+
+    
+
+    
+      <meta content="Cómo realizar un suavizado de datos con el filtro Savitzky-Golay y R" property="og:title">
+      <meta content="article" property="og:type">
+    
+
+    
+      <meta content="Bienvenido a mi espacio web personal" property="og:description">
+    
+
+    
+      <meta content="http://localhost:4000/r/2017/11/11/sGolay.html" property="og:url">
+    
+
+    
+      <meta content="2017-11-11T00:00:00+01:00" property="article:published_time">
+      <meta content="http://localhost:4000/about/" property="article:author">
+    
+
+    
+      <meta content="http://localhost:4000/static/img/avatar.jpg" property="og:image">
+    
+
+    
+      
+        <meta content="R" property="article:section">
+      
+    
+
+    
+      
+    
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@Joan_C_A">
+    <meta name="twitter:creator" content="@Joan_C_A">
+
+    
+      <meta name="twitter:title" content="Cómo realizar un suavizado de datos con el filtro Savitzky-Golay y R">
+    
+
+    
+      <meta name="twitter:url" content="http://localhost:4000/r/2017/11/11/sGolay.html">
+    
+
+    
+      <meta name="twitter:description" content="Bienvenido a mi espacio web personal">
+    
+
+    
+
+    <!-- Font awesome icons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/static/css/syntax.css">
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300italic,300,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/super-search.css">
+    <link rel="stylesheet" href="/static/css/thickbox.css">
+    <link rel="stylesheet" href="/static/css/projects.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+
+    
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-sm-3">
+        <div class="fixed-condition">
+          <a href="/"><img class="profile-avatar" src="/static/img/avatar.jpg" height="75px" width="75px" /></a>
+          <h1 class="author-name">Joan Cano</h1>
+          
+            <div class="profile-about">
+              Geógrafo especializado en GIS y Teledetección. Geoinquieto.
+            </div>
+          
+          <div class="social">
+            <ul>
+              
+                <li><a href="https://www.facebook.com/joan.canoaladid" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              
+                <li><a href="https://twitter.com/Joan_C_A" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              
+                <li><a href="https://www.linkedin.com/in/joan-cano-aladid-122835b4/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+              
+                <li><a href="#" target="_blank"><i class="fa fa-stack-exchange"></i></a></li>
+              
+                <li><a href="https://github.com/JoanCano" target="_blank"><i class="fa fa-github"></i></a></li>
+              
+            </ul>
+          </div>
+          <div class="search" id="js-search">
+            <input type="text" placeholder="(sitemap)~$ type to search" class="search__input form-control" id="js-search__input">
+            <ul class="search__results" id="js-search__results"></ul>
+          </div>
+          <hr />
+          <ul class="sidebar-nav">
+            <strong>Navigation</strong>
+            <li><a href="/">Home</a></li>
+            
+              <li><a class="about" href="/about/">About Me</a></li>
+            
+              <li><a class="about" href="/projects/">My Projects</a></li>
+            
+              <li><a class="about" href="/feed.xml">XML Feed</a></li>
+            
+          </ul>
+        </div>
+        <!-- end /.fixed-condition -->
+      </div>
+      <div class="col-sm-8 col-offset-1 main-layout">
+        <header class="post-header">
+  <h1 class="post-title">Cómo realizar un suavizado de datos con el filtro Savitzky-Golay y R</h1>
+</header>
+
+<span class="time">11 Nov 2017</span>
+
+  <span class="categories">
+    &raquo; <a href="/category/R">R</a>
+  </span>
+
+
+<div class="content">
+  <div class="post"><p>El filtro <em>Savitzky-Golay</em> se utiliza normalmente para el suavizado de datos, ajustando un polinomio con al menos k+1 puntos equidistantes para determinar el nuevo valor de cada punto.</p>
+
+<p>En teledetección, cuando se trabaja con firmas espectrales se suele utilizar este filtro por conservar las características de la distribución inicial, los máximos y mínimos relativos y el ancho entre picos. El filtro simula una ventana que se desliza por los datos, suavizándolos a partir de los datos de la ventana.</p>
+
+<p>Para poder emplearlo en <a href="https://cran.r-project.org/">R</a>, necesitaremos el paquete <code class="highlighter-rouge">signal</code>, el cual contiene funciones de procesamiento compatibles con <em>Matlab/Octvave</em>, como filtros, funciones de filtrado, visualización de modelos de filtros, interpolación, etc. Las funciones que se van a emplear son:</p>
+
+<ul>
+  <li><em>sgolay</em>, para calcular los coeficientes.</li>
+  <li><em>filter</em>, para aplicar los coeficientes a los datos, con un ajuste de mínimos cuadrados (cuadrado de las diferencias entre los valores calculados y observados).</li>
+</ul>
+
+<h4 id="cómo-establecer-los-parámetros-de-filtrado">Cómo establecer los parámetros de filtrado</h4>
+<ul>
+  <li><code class="highlighter-rouge">p</code>  es el orden del polinomio. Si es alto, gestiona mejor los rasgos espectrales estrechos, pero suaviza menos los anchos.</li>
+  <li><code class="highlighter-rouge">n</code> es la longitud del filtro (siempre impar). Entre 1 y 2 la anchura del rasgo m?s estrecho en los datos.</li>
+  <li><code class="highlighter-rouge">m</code> devuelve la derivada de los coeficientes de filtrado</li>
+  <li><code class="highlighter-rouge">ts</code> es el factor de escala de tiempo</li>
+</ul>
+
+<h4 id="establecer-el-directorio-de-trabajo">Establecer el directorio de trabajo</h4>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Directorio de trabajo</span><span class="w">
+</span><span class="n">dir</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">setwd</span><span class="p">(</span><span class="s2">"/home/joan/TRATAMIENTO/"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="cargar-los-datos-y-crear-un-df">Cargar los datos y crear un DF</h4>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.csv</span><span class="p">(</span><span class="s2">"FIRMAS_REF.csv"</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">","</span><span class="p">,</span><span class="w"> </span><span class="n">dec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">","</span><span class="p">)</span><span class="w">
+</span><span class="c1"># Nótese que se transforman los vectores a factores, de lo contrario el filtro no funcionará</span><span class="w">
+</span><span class="n">df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">stringsAsFactors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="visualizamos-las-gráficas-para-determinar-la-n">Visualizamos las gráficas para determinar la <em>n</em></h4>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">WL</span><span class="p">,</span><span class="w"> </span><span class="n">df</span><span class="o">$</span><span class="n">Firma_1</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"l"</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Gr?fica firma 1"</span><span class="p">,</span><span class="w"> </span><span class="n">xlab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"wavelength"</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Reflectividad"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+<p><img src="../static/img/firma1.png" alt="plot" /></p>
+
+<p>Se escoge el ancho de entre la longitud de onda <code class="highlighter-rouge">737 - 748</code> como rasgo más estrecho, de manera que su doble nos da una <strong>n de 21</strong>.</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#install.packages("signal")</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">signal</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Calcular los coeficientes de filtro</span><span class="w">
+</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="w">
+</span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">21</span><span class="w">
+</span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span><span class="n">sg</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sgolay</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Se aplica el filtro con los coeficientes a nuestros datos</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">signal</span><span class="p">)</span><span class="w">
+
+</span><span class="n">df</span><span class="o">$</span><span class="n">Firma_1sg</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">filter</span><span class="p">(</span><span class="n">sg</span><span class="p">,</span><span class="w"> </span><span class="n">df</span><span class="o">$</span><span class="n">Firma_1</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Visualizamos el resultado</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span><span class="w">
+</span><span class="n">plotsg</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ggplot</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_point</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">WL</span><span class="p">,</span><span class="w"> </span><span class="n">df</span><span class="o">$</span><span class="n">Firma_1</span><span class="p">),</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_line</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">WL</span><span class="p">,</span><span class="w"> </span><span class="n">df</span><span class="o">$</span><span class="n">Firma_1sg</span><span class="p">),</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"red2"</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">xlab</span><span class="p">(</span><span class="s2">"Wavelength"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">ylab</span><span class="p">(</span><span class="s2">"Reflectancia"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">theme_light</span><span class="p">()</span><span class="w">
+</span><span class="n">print</span><span class="p">(</span><span class="n">plotsg</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+<p><img src="../static/images/golay.png" alt="golay" /></p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Exportamos como DF</span><span class="w">
+</span><span class="n">dfsg</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">WL</span><span class="p">,</span><span class="w"> </span><span class="n">df</span><span class="o">$</span><span class="n">Firma_1sg</span><span class="p">)</span><span class="w">
+</span><span class="n">write.csv</span><span class="p">(</span><span class="n">dfsg</span><span class="p">,</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"firmas_SG.csv"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+</div>
+  <div class="share-page">
+  <span style="float: left;">Share this on &rarr;&nbsp;&nbsp;</span>
+
+  <!-- Twitter -->
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="Joan_C_A">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+  <!-- Facebook -->
+  <div class="fb-share-button" data-href="http://localhost:4000/r/2017/11/11/sGolay.html" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>
+</div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=1749788565247320";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+</div>
+
+
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+  
+
+<div class="PageNavigation">
+  
+    <a class="prev" href="/jekyll/2017/10/21/makeYourownBlog.html">&laquo; ¿Cómo crearte un blog personal con Jekyll?</a>
+  
+  
+    <a class="next" href="/fotogrametria/2017/11/28/ODM.html">Cómo instalar OpenDroneMap &raquo;</a>
+  
+</div>
+
+<div class="disqus-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var disqus_shortname = "jcano";
+    var disqus_identifier = "http://localhost:4000_Cómo realizar un suavizado de datos con el filtro Savitzky-Golay y R";
+    var disqus_title = "Cómo realizar un suavizado de datos con el filtro Savitzky-Golay y R";
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    /* ]]> */
+  </script>
+</div>
+
+        <footer>
+          &copy; Joan Cano
+          
+            - <a href="https://github.com/JoanCano">https://github.com/JoanCano</a> - Powered by Jekyll.
+          
+          <div class="btn-github" style="float:right;">
+            <iframe src="https://ghbtns.com/github-btn.html?user=agusmakmun&repo=agusmakmun.github.io&type=star&count=true" frameborder="0" scrolling="0" width="85" height="20px"></iframe>
+            <iframe src="https://ghbtns.com/github-btn.html?user=agusmakmun&repo=agusmakmun.github.io&type=fork&count=true" frameborder="0" scrolling="0" width="85" height="20px"></iframe>
+          </div>
+        </footer>
+      </div>
+      <!-- end /.col-sm-8 -->
+    </div>
+    <!-- end /.container -->
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/super-search.js"></script>
+    <script src="/static/js/thickbox-compressed.js"></script>
+    <script src="/static/js/projects.js"></script>
+  </body>
+</html>
+

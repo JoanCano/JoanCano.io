@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/static/img/favicon.ico" />
+    <title>Lectura y decodificación de los metadatos en imágenes de la cámara Sequoia - Blog</title>
+    <meta name="author" content="Joan Cano" />
+    <meta name="description" content="Lectura y decodificación de los metadatos en imágenes de la cámara Sequoia" />
+    <meta name="keywords" content="Lectura y decodificación de los metadatos en imágenes de la cámara Sequoia, Blog, remote_sensing" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+    <meta content="1749788565247320" property="fb:app_id">
+    <meta content="Blog" property="og:site_name">
+
+    
+
+    
+      <meta content="Lectura y decodificación de los metadatos en imágenes de la cámara Sequoia" property="og:title">
+      <meta content="article" property="og:type">
+    
+
+    
+      <meta content="Bienvenido a mi espacio web personal" property="og:description">
+    
+
+    
+      <meta content="http://localhost:4000/remote_sensing/2017/09/01/decode.html" property="og:url">
+    
+
+    
+      <meta content="2017-09-01T00:00:00+02:00" property="article:published_time">
+      <meta content="http://localhost:4000/about/" property="article:author">
+    
+
+    
+      <meta content="http://localhost:4000/static/img/avatar.jpg" property="og:image">
+    
+
+    
+      
+        <meta content="remote_sensing" property="article:section">
+      
+    
+
+    
+      
+    
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@Joan_C_A">
+    <meta name="twitter:creator" content="@Joan_C_A">
+
+    
+      <meta name="twitter:title" content="Lectura y decodificación de los metadatos en imágenes de la cámara Sequoia">
+    
+
+    
+      <meta name="twitter:url" content="http://localhost:4000/remote_sensing/2017/09/01/decode.html">
+    
+
+    
+      <meta name="twitter:description" content="Bienvenido a mi espacio web personal">
+    
+
+    
+
+    <!-- Font awesome icons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/static/css/syntax.css">
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300italic,300,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/super-search.css">
+    <link rel="stylesheet" href="/static/css/thickbox.css">
+    <link rel="stylesheet" href="/static/css/projects.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+
+    
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-sm-3">
+        <div class="fixed-condition">
+          <a href="/"><img class="profile-avatar" src="/static/img/avatar.jpg" height="75px" width="75px" /></a>
+          <h1 class="author-name">Joan Cano</h1>
+          
+            <div class="profile-about">
+              Geógrafo especializado en GIS y Teledetección. Geoinquieto.
+            </div>
+          
+          <div class="social">
+            <ul>
+              
+                <li><a href="https://www.facebook.com/joan.canoaladid" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              
+                <li><a href="https://twitter.com/Joan_C_A" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              
+                <li><a href="https://www.linkedin.com/in/joan-cano-aladid-122835b4/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+              
+                <li><a href="#" target="_blank"><i class="fa fa-stack-exchange"></i></a></li>
+              
+                <li><a href="https://github.com/JoanCano" target="_blank"><i class="fa fa-github"></i></a></li>
+              
+            </ul>
+          </div>
+          <div class="search" id="js-search">
+            <input type="text" placeholder="(sitemap)~$ type to search" class="search__input form-control" id="js-search__input">
+            <ul class="search__results" id="js-search__results"></ul>
+          </div>
+          <hr />
+          <ul class="sidebar-nav">
+            <strong>Navigation</strong>
+            <li><a href="/">Home</a></li>
+            
+              <li><a class="about" href="/about/">About Me</a></li>
+            
+              <li><a class="about" href="/projects/">My Projects</a></li>
+            
+              <li><a class="about" href="/feed.xml">XML Feed</a></li>
+            
+          </ul>
+        </div>
+        <!-- end /.fixed-condition -->
+      </div>
+      <div class="col-sm-8 col-offset-1 main-layout">
+        <header class="post-header">
+  <h1 class="post-title">Lectura y decodificación de los metadatos en imágenes de la cámara Sequoia</h1>
+</header>
+
+<span class="time">01 Sep 2017</span>
+
+  <span class="categories">
+    &raquo; <a href="/category/remote_sensing">remote_sensing</a>
+  </span>
+
+
+<div class="content">
+  <div class="post"><p>Los metadatos son datos que nos proporcionan información sobre los datos, entre ellos los descriptivos, estructurales y administrativos.
+Estos pueden ser escritos en iḿagenes como las que toma nuestra cámara, que ayudarán en el proceso posterior de producción a partir de palabras clave.</p>
+
+<h3 id="tipos-de-metadatos-en-imágenes">Tipos de metadatos en imágenes</h3>
+
+<p>Las imágenes pueden contener diferentes metadatos, regidos por las normas creadas por organizaciones encargadas de ello; algunas de estas normas son:</p>
+
+<ul>
+  <li>IPTC</li>
+  <li>IPTC para XMP</li>
+  <li><strong>XMP</strong></li>
+  <li><strong>EXIF</strong></li>
+  <li>Dublin Core</li>
+  <li>PLUS</li>
+  <li>VRA</li>
+</ul>
+
+<h3 id="librerías-de-lectura-de-metadatos-exiftools">Librerías de lectura de metadatos: Exiftools</h3>
+<p>Al haber tratado ya los metadatos de las imágenes de la <a href="http://tecnitop.com/es/camaras-accesorios-y-software/">Sequoia</a>, avanzo la necesidad de interpretar metadatos del estandar <a href="https://en.wikipedia.org/wiki/Extensible_Metadata_Platform#Free_software_and_open-source_tools_.28read.2Fwrite_support.29">XMP</a>, una marca registrada por Adobe Systems que cuando pasó a ser ISO, dejó se ser propietaria.</p>
+
+<p>Por lo tanto, necesitaremos buscar un software (libre) capaz de leer XMP, a continuación los que he probado:</p>
+<ul>
+  <li><a href="https://www.gimp.org/">GIMP</a></li>
+  <li><a href="https://www.digikam.org/">digiKam</a></li>
+  <li><a href="https://www.sno.phy.queensu.ca/~phil/exiftool/">ExifTool</a></li>
+  <li><a href="https://www.imagemagick.org/script/index.php">ImageMagick</a></li>
+</ul>
+
+<p>GIMP y ImageMagick vienen por defecto en Debian. Sin embargo Exiftool lo tenemos que instalar:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># instalar exiftool</span>
+ apt-cache install libimage-exiftool-perl
+</code></pre></div></div>
+
+<h3 id="mostrar-los-metadatos-de-una-imagen">Mostrar los metadatos de una imagen</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exiftool imagen.tif
+</code></pre></div></div>
+
+<p><strong>ImageMagick</strong> también se puede ejecutar desde la terminal:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>identify <span class="nt">-verbose</span> imagen.tif
+</code></pre></div></div>
+<p><a href="/multispectralcam/exiftool.txt">Resultados exiftool</a>, <a href="/multispectralcam/imageMagick.txt">Resultados ImageMagick</a></p>
+
+<hr />
+
+<h4 id="con-exiftools">Con Exiftools</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>system <span class="o">(</span><span class="s2">"exiftool /home/joan/multispectralcam/test/IMG_170825_082736_0004_NIR.TIF"</span><span class="o">)</span>
+</code></pre></div></div>
+
+<h4 id="exportar-metadatos-a-csv">Exportar metadatos a csv</h4>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">output</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">system</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="s2">"exiftool -n -csv /home/joan/multispectralcam/test/IMG_170825_082736_0004_NIR.TIF"</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">intern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="w"> </span><span class="p">)</span><span class="w">
+</span><span class="n">df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.csv</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">textConnection</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="p">),</span><span class="w"> </span><span class="n">stringsAsFactors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="w"> </span><span class="p">)</span><span class="w">
+</span><span class="n">write.csv</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"/home/joan/Escritorio/test.csv"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="decodificar-formato-base64-mediante-python">Decodificar formato Base64 mediante Python</h4>
+
+<p>Se pueden apreciar metadatados muy valiosos para la investigación, como:</p>
+<ol>
+  <li>Yaw, pitch y roll</li>
+  <li>Viñeteado</li>
+  <li>Valor de luminosidad</li>
+  <li>Calibraciones</li>
+  <li>Corriente oscura</li>
+  <li>etc…</li>
+</ol>
+
+<hr />
+
+<p>Pero.. ¿Y la etiqueta <strong>IrradianceList</strong>?</p>
+
+<hr />
+
+<p>Esta etiqueta viene codificada en <strong>Base64</strong>, un sistema de numeración posicional que utiliza el 64 como base y carácteres ASCII (usa el rango entre A-Z, a-z y 0-9, más dos símbolos que pueden variar). De manera que tenemos la siguiente cadena de carácteres:</p>
+
+<p><code class="highlighter-rouge">U5UwEQAAAABaBa4CAQBkAHAJ6sLRfAHBo95bwBegMxEAAAAAnAXQAgEAZACLX+zCj/G+wImc0b/rrDYRAAAAAKIF0wIBAGQAltDqwi1DusAigqS/M8I5EQAAAADNBGgCAQBkANc958JGokfBxkHAPsbZPBEAAAAA+AP9AQEAZACYTeXCGYhEwV7Bsb833z8RAAAAAOQD8gEBAGQA21LqwrSgfcHvtz3ACeVCEQAAAADzA/oBAQBkAICY+cK6j6HBPJaJQLL3RREAAAAAbAO3AQEAZAC0rQPD67Hbwa0xNEE+CUkRAAAAAM8D6AEBAGQAS8j8wj+alsH7+SrBeA1MEQAAAAAPBYkCAQBkAA/iBMP/TBjCafi/wPkFTxEAAAAArgRZAgEAZABL0ATDLYzwwSFcr78KF1IRAAAAAI0FyAIBAGQAfjkBw6Iwc8FEj6LAcyRVEQAAAABsBbgCAQBkAJ/d+8K8cFbBgX6owA==
+</code></p>
+
+<hr />
+<p>Para poder decodificarlo se han utilizado una serie de librerías en <a href="https://www.python.org/">Python</a>:</p>
+
+<ul>
+  <li><a href="https://smarnach.github.io/pyexiftool/">exiftool</a></li>
+  <li><a href="https://docs.python.org/2/library/base64.html">base64</a></li>
+  <li><a href="https://docs.python.org/2/library/struct.html">struct</a></li>
+  <li><a href="https://github.com/smarnach/pyexiftool/blob/master/exiftool.py">exiftool.py</a>. En el caso de que el script de error, hay que adjuntar esta librería.</li>
+</ul>
+
+<p>Este es el script utilizado:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">exiftool</span>
+<span class="kn">import</span> <span class="nn">base64</span>
+<span class="kn">import</span> <span class="nn">struct</span>
+<span class="kn">import</span> <span class="nn">glob</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">tag</span> <span class="o">=</span> <span class="s">"XMP:IrradianceList"</span>
+
+<span class="n">directorio</span> <span class="o">=</span> <span class="s">'test'</span>
+<span class="n">canales</span> <span class="o">=</span> <span class="p">[</span><span class="s">'GRE'</span><span class="p">,</span><span class="s">'RED'</span><span class="p">,</span><span class="s">'REG'</span><span class="p">,</span><span class="s">'NIR'</span><span class="p">]</span>
+
+<span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">canal</span> <span class="ow">in</span> <span class="n">canales</span><span class="p">:</span>
+    <span class="n">files</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">directorio</span><span class="p">,</span> <span class="s">'*'</span> <span class="o">+</span> <span class="n">canal</span> <span class="o">+</span> <span class="s">'*'</span><span class="p">))</span>
+
+    <span class="k">with</span> <span class="n">exiftool</span><span class="o">.</span><span class="n">ExifTool</span><span class="p">()</span> <span class="k">as</span> <span class="n">et</span><span class="p">:</span>
+        <span class="n">metadata</span> <span class="o">=</span> <span class="n">et</span><span class="o">.</span><span class="n">get_tag_batch</span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">files</span><span class="p">)</span>
+
+        <span class="c">#print metadata</span>
+        <span class="k">for</span> <span class="n">file_metadata</span> <span class="ow">in</span> <span class="n">metadata</span><span class="p">:</span>
+            <span class="n">decoded</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="n">file_metadata</span><span class="p">)</span>
+
+        <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">decoded</span><span class="p">),</span> <span class="mi">28</span><span class="p">):</span>
+            <span class="k">print</span> <span class="n">struct</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="s">"qHHHHfff"</span><span class="p">,</span> <span class="n">decoded</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">28</span><span class="p">])</span>
+
+</code></pre></div></div>
+
+<hr />
+<h2 id="resultados">Resultados</h2>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irradianceList</span><span class="w"> </span><span class="o">&lt;-</span><span class="n">read.table</span><span class="p">(</span><span class="s2">"/home/joan/multispectralcam/decode.csv"</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="o">=</span><span class="s2">","</span><span class="p">)</span><span class="w">
+</span><span class="n">knitr</span><span class="o">::</span><span class="n">kable</span><span class="p">(</span><span class="n">irradianceList</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<hr />
+
+<p>Como se puede apreciar, aparecen muchas filas de datos, sin embargo solo necesitamos 1, la última obtenida por imagen. Las filas pueden variar según la imagen, esto es debido a que parece que la cámara guarda información a 5Hz.</p>
+</div>
+  <div class="share-page">
+  <span style="float: left;">Share this on &rarr;&nbsp;&nbsp;</span>
+
+  <!-- Twitter -->
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="Joan_C_A">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+  <!-- Facebook -->
+  <div class="fb-share-button" data-href="http://localhost:4000/remote_sensing/2017/09/01/decode.html" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>
+</div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=1749788565247320";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+</div>
+
+
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+            
+            <div class="panel-body">
+              <h4>Related Posts</h4>
+              <ul>
+            
+                <li class="relatedPost">
+                  <a href="http://localhost:4000/remote_sensing/2017/08/13/conexion-Sequoia.html">Obtención de datos mediante HTTP-API de la cámara Parrot Sequoia</a>
+                  
+                    (Categories: <a href="/category/remote_sensing">remote_sensing</a>)
+                  
+                </li>
+          
+          
+        
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+  
+  </ul>
+</div>
+
+
+<div class="PageNavigation">
+  
+    <a class="prev" href="/remote_sensing/2017/08/13/conexion-Sequoia.html">&laquo; Obtención de datos mediante HTTP-API de la cámara Parrot Sequoia</a>
+  
+  
+    <a class="next" href="/python/2017/09/07/pythonGis.html">Script en ArcPy para calcular superficies por su valor &raquo;</a>
+  
+</div>
+
+<div class="disqus-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var disqus_shortname = "jcano";
+    var disqus_identifier = "http://localhost:4000_Lectura y decodificación de los metadatos en imágenes de la cámara Sequoia";
+    var disqus_title = "Lectura y decodificación de los metadatos en imágenes de la cámara Sequoia";
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    /* ]]> */
+  </script>
+</div>
+
+        <footer>
+          &copy; Joan Cano
+          
+            - <a href="https://github.com/JoanCano">https://github.com/JoanCano</a> - Powered by Jekyll.
+          
+          <div class="btn-github" style="float:right;">
+            <iframe src="https://ghbtns.com/github-btn.html?user=agusmakmun&repo=agusmakmun.github.io&type=star&count=true" frameborder="0" scrolling="0" width="85" height="20px"></iframe>
+            <iframe src="https://ghbtns.com/github-btn.html?user=agusmakmun&repo=agusmakmun.github.io&type=fork&count=true" frameborder="0" scrolling="0" width="85" height="20px"></iframe>
+          </div>
+        </footer>
+      </div>
+      <!-- end /.col-sm-8 -->
+    </div>
+    <!-- end /.container -->
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/super-search.js"></script>
+    <script src="/static/js/thickbox-compressed.js"></script>
+    <script src="/static/js/projects.js"></script>
+  </body>
+</html>
+
