@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/static/img/favicon.ico" />
+    <title>Script en ArcPy para calcular superficies por su valor - Blog</title>
+    <meta name="author" content="Joan Cano" />
+    <meta name="description" content="Script en ArcPy para calcular superficies por su valor" />
+    <meta name="keywords" content="Script en ArcPy para calcular superficies por su valor, Blog, python" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+    <meta content="1749788565247320" property="fb:app_id">
+    <meta content="Blog" property="og:site_name">
+
+    
+
+    
+      <meta content="Script en ArcPy para calcular superficies por su valor" property="og:title">
+      <meta content="article" property="og:type">
+    
+
+    
+      <meta content="Bienvenido a mi espacio web personal" property="og:description">
+    
+
+    
+      <meta content="http://localhost:4000/python/2017/09/07/pythonGis.html" property="og:url">
+    
+
+    
+      <meta content="2017-09-07T00:00:00+02:00" property="article:published_time">
+      <meta content="http://localhost:4000/about/" property="article:author">
+    
+
+    
+      <meta content="http://localhost:4000/static/img/avatar.jpg" property="og:image">
+    
+
+    
+      
+        <meta content="python" property="article:section">
+      
+    
+
+    
+      
+    
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@Joan_C_A">
+    <meta name="twitter:creator" content="@Joan_C_A">
+
+    
+      <meta name="twitter:title" content="Script en ArcPy para calcular superficies por su valor">
+    
+
+    
+      <meta name="twitter:url" content="http://localhost:4000/python/2017/09/07/pythonGis.html">
+    
+
+    
+      <meta name="twitter:description" content="Bienvenido a mi espacio web personal">
+    
+
+    
+
+    <!-- Font awesome icons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/static/css/syntax.css">
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300italic,300,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/super-search.css">
+    <link rel="stylesheet" href="/static/css/thickbox.css">
+    <link rel="stylesheet" href="/static/css/projects.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+
+    
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-sm-3">
+        <div class="fixed-condition">
+          <a href="/"><img class="profile-avatar" src="/static/img/avatar.jpg" height="75px" width="75px" /></a>
+          <h1 class="author-name">Joan Cano</h1>
+          
+            <div class="profile-about">
+              Geógrafo especializado en GIS y Teledetección. Geoinquieto.
+            </div>
+          
+          <div class="social">
+            <ul>
+              
+                <li><a href="https://www.facebook.com/joan.canoaladid" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              
+                <li><a href="https://twitter.com/Joan_C_A" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              
+                <li><a href="https://www.linkedin.com/in/joan-cano-aladid-122835b4/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+              
+                <li><a href="#" target="_blank"><i class="fa fa-stack-exchange"></i></a></li>
+              
+                <li><a href="https://github.com/JoanCano" target="_blank"><i class="fa fa-github"></i></a></li>
+              
+            </ul>
+          </div>
+          <div class="search" id="js-search">
+            <input type="text" placeholder="(sitemap)~$ type to search" class="search__input form-control" id="js-search__input">
+            <ul class="search__results" id="js-search__results"></ul>
+          </div>
+          <hr />
+          <ul class="sidebar-nav">
+            <strong>Navigation</strong>
+            <li><a href="/">Home</a></li>
+            
+              <li><a class="about" href="/about/">About Me</a></li>
+            
+              <li><a class="about" href="/projects/">My Projects</a></li>
+            
+              <li><a class="about" href="/feed.xml">XML Feed</a></li>
+            
+          </ul>
+        </div>
+        <!-- end /.fixed-condition -->
+      </div>
+      <div class="col-sm-8 col-offset-1 main-layout">
+        <header class="post-header">
+  <h1 class="post-title">Script en ArcPy para calcular superficies por su valor</h1>
+</header>
+
+<span class="time">07 Sep 2017</span>
+
+  <span class="categories">
+    &raquo; <a href="/category/python">python</a>
+  </span>
+
+
+<div class="content">
+  <div class="post"><h3 id="mi-primer-script">Mi primer Script</h3>
+
+<p>Cursando el Máster en TIG en la <a href="http://unizar.es/&quot;&gt;Universidad de Zaragoza">Universidad de Zaragoza</a>, una de las asignaturas fue <a href="https://www.python.org/">Python</a>. En ella hemos utilizado como intérprete <a href="http://desktop.arcgis.com/es/arcmap/10.3/analyze/arcpy/what-is-arcpy-.htm">ArcPy</a> el cual tiene extensión en ArcGIS para analizar datos, conversión de datos, administración de datos y automatización de mapas, lo que ayuda a aumentar la productividad.</p>
+
+<p>Dejo aquí abajo el script. Se trata de un simple geoproceso que consiste en extraer de una capa de puntos cualquiera, el valor que se demanda de la suma de los píxeles que caen dentro de los puntos. De manera que itera, generando buffers, hasta que alcanza el valor que se le pide.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="s">"""
+---------------------------------------------------------------------------
+Descripcion: El siguiente script determina el area que se requiere para una
+    determinada actividad, en este caso el calculo de una biomasa de
+    100000 ton/ha para poder emplazar una planta.
+Funcionamiento: A partir de una capa de puntos (plantas.shp) que representa
+    la localizacion de estas, se recrean areas de influencia hasta determinar
+    la area que se requiere.
+    El valor de cada area de influencia se calcula a partir de la suma
+    del valor de los pixeles.
+---------------------------------------------------------------------------
+"""</span>
+
+<span class="c"># Importo los modulos</span>
+<span class="kn">import</span> <span class="nn">arcpy</span><span class="p">,</span> <span class="n">os</span>
+<span class="kn">from</span> <span class="nn">arcpy</span> <span class="kn">import</span> <span class="n">env</span>
+<span class="kn">from</span> <span class="nn">arcpy.sa</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c"># Defino mi sistema de referencia espacial</span>
+<span class="n">sr</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">SpatialReference</span><span class="p">()</span>
+<span class="n">sr</span><span class="o">.</span><span class="n">factoryCode</span> <span class="o">=</span> <span class="mi">23030</span>
+<span class="n">sr</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
+<span class="n">arcpy</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">outputCoordinateSystem</span> <span class="o">=</span> <span class="n">sr</span>
+
+<span class="c"># Declaro la ruta y mi entorno de trabajo</span>
+<span class="n">ruta</span> <span class="o">=</span> <span class="s">"C:</span><span class="se">\\</span><span class="s">Users</span><span class="se">\\</span><span class="s">Joan-PC</span><span class="se">\\</span><span class="s">Desktop</span><span class="se">\\</span><span class="s">Datos</span><span class="se">\\</span><span class="s">"</span>
+<span class="n">arcpy</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">workspace</span> <span class="o">=</span> <span class="n">ruta</span>
+<span class="c"># Sobreescribir mis archivos</span>
+<span class="n">arcpy</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">overwriteOutput</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="c"># Licencia</span>
+<span class="n">arcpy</span><span class="o">.</span><span class="n">CheckOutExtension</span><span class="p">(</span><span class="s">"Spatial"</span><span class="p">)</span>
+
+<span class="c"># variables locales:</span>
+<span class="n">capa</span> <span class="o">=</span> <span class="s">"plantas.shp"</span>
+<span class="n">raster</span> <span class="o">=</span> <span class="s">"prod"</span>
+<span class="n">output</span> <span class="o">=</span> <span class="s">"output"</span>
+<span class="n">campo</span> <span class="o">=</span> <span class="s">"FID"</span>
+<span class="n">miAcopio</span> <span class="o">=</span> <span class="s">"acopio"</span>
+<span class="n">existe</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c"># Creo el campo que contendra el valor de biomasa</span>
+
+<span class="n">fieldList</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">ListFields</span><span class="p">(</span><span class="n">capa</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">fieldList</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">field</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">miAcopio</span><span class="p">:</span>
+        <span class="n">existe</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">if</span> <span class="n">existe</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">miAcopio</span><span class="o">+</span><span class="s">" existe"</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">arcpy</span><span class="o">.</span><span class="n">AddField_management</span><span class="p">(</span><span class="n">capa</span><span class="p">,</span><span class="n">miAcopio</span><span class="p">)</span>
+    <span class="k">print</span> <span class="n">miAcopio</span><span class="o">+</span><span class="s">" agregado"</span>
+
+<span class="c"># Utilizo un cursor de busqueda para accedeer al valor de los distintos</span>
+<span class="c"># campos de la tabla plantas, por fila y de manera independiente.</span>
+
+<span class="n">campos</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">UpdateCursor</span><span class="p">(</span><span class="n">capa</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">campos</span><span class="p">:</span>
+    <span class="n">entidad</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">FID</span><span class="p">)</span>
+    <span class="c">#  Defino la clausula -&gt; FID = X</span>
+    <span class="n">whereClause</span> <span class="o">=</span> <span class="s">"{0} = {1}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">campo</span><span class="p">,</span> <span class="n">entidad</span><span class="p">)</span>
+    <span class="c"># Creo una capa temporal con la seleccion</span>
+    <span class="n">arcpy</span><span class="o">.</span><span class="n">MakeFeatureLayer_management</span><span class="p">(</span><span class="n">capa</span><span class="p">,</span> <span class="s">"currentMask"</span><span class="p">,</span> <span class="n">whereClause</span><span class="p">)</span>
+
+    <span class="c"># Defino las variables dinamicas del bucle</span>
+    <span class="n">distancia</span> <span class="o">=</span> <span class="mi">500</span>
+    <span class="n">densidad</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c"># Bucle, hasta que no tenga 100000 de aqui no sale</span>
+    <span class="k">while</span> <span class="n">densidad</span> <span class="o">&lt;=</span> <span class="mi">100000</span><span class="p">:</span>
+                <span class="n">capaSalida</span> <span class="o">=</span> <span class="n">entidad</span> <span class="o">+</span> <span class="s">"_"</span> <span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">distancia</span><span class="p">)</span><span class="o">+</span><span class="s">".shp"</span>
+                <span class="n">arcpy</span><span class="o">.</span><span class="n">Buffer_analysis</span><span class="p">(</span><span class="s">"currentMask"</span><span class="p">,</span> <span class="n">capaSalida</span><span class="p">,</span> <span class="n">distancia</span><span class="p">,</span> <span class="s">"FULL"</span><span class="p">,</span> <span class="s">"ROUND"</span><span class="p">,</span> <span class="s">"NONE"</span><span class="p">,</span> <span class="s">""</span><span class="p">,</span> <span class="s">"PLANAR"</span><span class="p">)</span>
+
+                <span class="n">outRaster</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">sa</span><span class="o">.</span><span class="n">ExtractByMask</span><span class="p">(</span><span class="n">raster</span><span class="p">,</span> <span class="n">capaSalida</span><span class="p">)</span>
+                <span class="n">myArray</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">RasterToNumPyArray</span><span class="p">(</span><span class="n">outRaster</span><span class="p">,</span> <span class="n">nodata_to_value</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">densidad</span> <span class="o">=</span> <span class="n">myArray</span><span class="o">.</span><span class="nb">sum</span><span class="p">()</span>
+                <span class="n">distancia</span><span class="o">+=</span> <span class="mi">100</span>
+
+                <span class="k">print</span> <span class="s">"buffer incompleto: "</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">densidad</span><span class="p">)</span><span class="o">+</span><span class="s">" repite "</span><span class="o">+</span><span class="n">capaSalida</span>
+
+    <span class="c"># Cuando supere el valor, extraer el resultado en una capa nueva</span>
+    <span class="k">if</span> <span class="n">densidad</span> <span class="o">&gt;</span> <span class="mi">100000</span><span class="p">:</span>
+        <span class="n">salida</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">CopyFeatures_management</span><span class="p">(</span><span class="n">capaSalida</span><span class="p">,</span> <span class="s">"area_"</span><span class="o">+</span><span class="n">entidad</span><span class="o">+</span><span class="s">"_"</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">distancia</span><span class="p">))</span>
+        <span class="k">print</span> <span class="s">"buffer completo: "</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">salida</span><span class="p">)</span><span class="o">+</span><span class="s">" con: "</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">densidad</span><span class="p">)</span><span class="o">+</span><span class="s">" valor"</span>
+
+        <span class="c"># Ahora tengo que actualizar el campo con el valor de biomasa</span>
+
+        <span class="k">with</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">da</span><span class="o">.</span><span class="n">UpdateCursor</span><span class="p">(</span><span class="n">salida</span><span class="p">,</span> <span class="p">(</span><span class="n">miAcopio</span><span class="p">))</span> <span class="k">as</span> <span class="n">cursor</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
+                <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">densidad</span>
+                <span class="n">cursor</span><span class="o">.</span><span class="n">updateRow</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+        <span class="k">del</span> <span class="n">cursor</span>
+<span class="k">del</span> <span class="n">campos</span>
+</code></pre></div></div>
+
+<p><a href="https://github.com/JoanCano/Joanproject/blob/master/python_gis/joan_script.py">Download script</a></p>
+</div>
+  <div class="share-page">
+  <span style="float: left;">Share this on &rarr;&nbsp;&nbsp;</span>
+
+  <!-- Twitter -->
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="Joan_C_A">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+  <!-- Facebook -->
+  <div class="fb-share-button" data-href="http://localhost:4000/python/2017/09/07/pythonGis.html" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>
+</div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=1749788565247320";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+</div>
+
+
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+  
+
+<div class="PageNavigation">
+  
+    <a class="prev" href="/remote_sensing/2017/09/01/decode.html">&laquo; Lectura y decodificación de los metadatos en imágenes de la cámara Sequoia</a>
+  
+  
+    <a class="next" href="/bash/2017/10/17/accountant.html">Sumando segundos en metadatos de imágenes &raquo;</a>
+  
+</div>
+
+<div class="disqus-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var disqus_shortname = "jcano";
+    var disqus_identifier = "http://localhost:4000_Script en ArcPy para calcular superficies por su valor";
+    var disqus_title = "Script en ArcPy para calcular superficies por su valor";
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    /* ]]> */
+  </script>
+</div>
+
+        <footer>
+          &copy; Joan Cano
+          
+            - <a href="https://github.com/JoanCano">https://github.com/JoanCano</a> - Powered by Jekyll.
+          
+          <div class="btn-github" style="float:right;">
+            <iframe src="https://ghbtns.com/github-btn.html?user=agusmakmun&repo=agusmakmun.github.io&type=star&count=true" frameborder="0" scrolling="0" width="85" height="20px"></iframe>
+            <iframe src="https://ghbtns.com/github-btn.html?user=agusmakmun&repo=agusmakmun.github.io&type=fork&count=true" frameborder="0" scrolling="0" width="85" height="20px"></iframe>
+          </div>
+        </footer>
+      </div>
+      <!-- end /.col-sm-8 -->
+    </div>
+    <!-- end /.container -->
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/super-search.js"></script>
+    <script src="/static/js/thickbox-compressed.js"></script>
+    <script src="/static/js/projects.js"></script>
+  </body>
+</html>
+
