@@ -2,7 +2,7 @@
 layout: post
 title: Cómo hacer visores con Panellum
 date:   2019-01-04 13:50:39
-categories: fotografía
+categories: [fotografia]
 ---
 
 Tenemos que tener 4 archivos. Entre ellos están el JS y CSS que se deben descargar de la [página web](https://pannellum.org/). El html lo tenemos que construir nosotros y como no, la imagen también ;).
