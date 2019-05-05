@@ -74,6 +74,8 @@ git clone https://github.com/JoanCano/joancano.github.io.git
 
 # Entraría a la carpeta del blog
 $ cd joancano.io/
+# Ejecutaría el siguiente comando para evitar fallos de gemas en mi repo
+$ bundle update github-pages
 ```
 En este punto es cuando crearíamos el nuevo post dentro de la carpeta ```_post```, donde guardaremos las nuevas publicaciones. Estas deben deben seguir el siguiente formato:  ```YEAR-MONTH-DAY-title.md```
 
