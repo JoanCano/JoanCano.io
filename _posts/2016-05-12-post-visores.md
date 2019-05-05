@@ -53,5 +53,5 @@ Este visor es más elaborado. Se trata de un visor que representa la ocupación 
 
 Se trata del mismo visor pero con un slider para mover según la fecha
 
-+ [Time and Slider 1](http://38994238.servicio-online.net/joancano.github.io/visores/visor_historia/versiones/v4/index.html)
++ [Time and Slider 1](http://38994238.servicio-online.net/joancano.github.io/visores/visor_historia/versiones/v6/oneSlider.html)
 + [Time and Slider 2](http://38994238.servicio-online.net/joancano.github.io/visores/visor_historia/versiones/v5/index.html)
