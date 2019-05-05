@@ -12,7 +12,7 @@ Gracias a una oportunidad de cooperación en Guatemala tuve la suerte de poder i
 
 La siguiente imagen es de la escuelita donde enseñé junto a mis compañeros el proyecto de OSM y lo que podía suponer para ellos, en concreto a esa comunidad y el municipio.
 
-<iframe width="800" height="500" src="http://sanfrancisco.duckdns.org/joan/panos/panellum.html" frameborder="0" allowfullscreen></iframe>
+<iframe width="800" height="500" src="http://38994238.servicio-online.net/joancano.github.io/panos/panellum.html" frameborder="0" allowfullscreen></iframe>
 
 
 

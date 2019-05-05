@@ -14,9 +14,9 @@ A continuación dejo algunos visores que hice como prueba para aprender a montar
 
 Se trata de un visor sencillo. El mapa está centrado en Zaragoza. El objetivo es mostrar la localización de algún lugar que se quiera resaltar.
 
-<iframe width="700" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://sanfrancisco.duckdns.org/joan/visores/zaragoza.html" style="border: 1px solid black"></iframe>
+<iframe width="700" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://38994238.servicio-online.net/joancano.github.io/visores/zaragoza.html" style="border: 1px solid black"></iframe>
 
-[Full page](http://sanfrancisco.duckdns.org/joan/visores/zaragoza.html)
+[Full page](http://38994238.servicio-online.net/joancano.github.io/visores/zaragoza.html)
 
 ### Visor 2. Zonas de vuelo con dron (Zaragoza)
 
@@ -27,27 +27,27 @@ De manera que hice el visor basándome en las áreas del kml y con un poco de <a
 + Las áreas de influencia, representan las zonas donde no está permitido volar en Zaragoza
 + Te permite geolocalizarte con el móvil.
 
-<iframe width="700" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://sanfrancisco.duckdns.org/joan/visores/rpa.html" style="border: 1px solid black"></iframe>
+<iframe width="700" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://38994238.servicio-online.net/joancano.github.io/visores/rpa.html" style="border: 1px solid black"></iframe>
 
 Actualmente el visor está desactualizado puesto que hay una nueva ley vigente. Además, AESA ya ha creado un visor we para poder comprobar donde se va a operar o volar recreativamente.
 
-[Full page](http://sanfrancisco.duckdns.org/joan/visores/rpa.html)
+[Full page](http://38994238.servicio-online.net/joancano.github.io/visores/rpa.html)
 
 ### Visor 3. MBTiles
 
 El siguiente visor tiene como mapa base un <a href="http://wiki.openstreetmap.org/wiki/MBTiles">MBTiles</a>. Este tipo de formato permite almacenar un mosaicado de imágenes en un solo archivo, como una base de datos SQLite. Me gusta utilizar MBTiles, por que te permite trabajar sin conexión a internet y se mueve fino fino, además del poco espacio que ocupan las teselas.
 
-<iframe width="700" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://sanfrancisco.duckdns.org/joan/visores/mbtiles/mbpolop.html" style="border: 1px solid black"></iframe>
+<iframe width="700" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://38994238.servicio-online.net/joancano.github.io/visores/mbtiles/mbpolop.html" style="border: 1px solid black"></iframe>
 
-[Full page](http://sanfrancisco.duckdns.org/joan/visores/mbtiles/mbpolop.html)
+[Full page](http://38994238.servicio-online.net/joancano.github.io/visores/mbtiles/mbpolop.html)
 
 ### Visor 4. Slider
 
 Puede surgir la necesidad de comparar distintas cartografías. Ello es muy sencillo en GIS de escritorio, pero cuando además s quiere compartir con muchos usuarios este tipo de visores me parecen perfectos. En este caso se comparan servicios WMS multitemporal de mi pueblo.
 
-<iframe width="700" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://sanfrancisco.duckdns.org/joan/visores/ventanas/windows.html" style="border: 1px solid black"></iframe>
+<iframe width="700" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://38994238.servicio-online.net/joancano.github.io/visores/ventanas/windows.html" style="border: 1px solid black"></iframe>
 
-[Full page](http://sanfrancisco.duckdns.org/joan/visores/ventanas/windows.html)
+[Full page](http://38994238.servicio-online.net/joancano.github.io/visores/ventanas/windows.html)
 
 ### Visor 5. Geo Photos con Flickr
 
@@ -55,14 +55,23 @@ Durante mi máster, tuvimos una salida de campo en la que identificamos diferent
 
 La API de Flickr nos permite almacenar y geolocalizar las fotos e interactuar con ellas mediante Leaflet. Si ya tenemos las fotos geolocalizadas (tomadas con móvil o cámara) podemos geolocalizarlas directamente, y si no podemos geolocalizarlas con Flickr o un software específico; en mi caso utilizo [Digikam](https://www.digikam.org/)
 
-<iframe width="700" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://sanfrancisco.duckdns.org/joan/visores/photo/photos.html" style="border: 1px solid black"></iframe>
+<iframe width="700" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://38994238.servicio-online.net/joancano.github.io/visores/photo/photos.html" style="border: 1px solid black"></iframe>
 
-[Full page](http://sanfrancisco.duckdns.org/joan/visores/photo/photos.html)
+[Full page](http://38994238.servicio-online.net/joancano.github.io/visores/photo/photos.html)
 
 ### Visor 6. Time and checkbox
 
 Este visor es más elaborado. Se trata de un visor que representa la ocupación francesa en Valencia durante los años 1812-13.
 
-<iframe width="800" height="750" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://sanfrancisco.duckdns.org/joan/visores/visor_historia/" style="border: 1px solid black"></iframe>
+<iframe width="800" height="750" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://38994238.servicio-online.net/joancano.github.io/visores/visor_historia/index.html" style="border: 1px solid black"></iframe>
 
-[Full page](http://sanfrancisco.duckdns.org/joan/visores/visor_historia/)
+[Full page](http://38994238.servicio-online.net/joancano.github.io/visores/visor_historia/index.html)
+
+### Visor 7. Time and Slider
+
+Se trata del mismo visor pero con un slider para mover según la fecha
+
+<iframe width="800" height="750" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://38994238.servicio-online.net/joancano.github.io/visores/visor_historia/versiones/v4/index.html" style="border: 1px solid black"></iframe>
+
+[Full page](http://38994238.servicio-online.net/joancano.github.io/visores/visor_historia/versiones/v4/index.html)
+[2 Sliders](http://38994238.servicio-online.net/joancano.github.io/visores/visor_historia/versiones/v5/index.html)

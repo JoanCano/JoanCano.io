@@ -12,7 +12,7 @@ Tenemos que tener 4 archivos. Entre ellos están el JS y CSS que se deben descar
 - panellum.css
 - imagen
 
-<iframe width="800" height="500" src="../static/panos/panellum.html" frameborder="0" allowfullscreen></iframe>
+<iframe width="800" height="500" src="http://38994238.servicio-online.net/joancano.github.io/panos/panellum.html" frameborder="0" allowfullscreen></iframe>
 
 
 Y este sería el código html, fijaros en el contenedor 'panorama':

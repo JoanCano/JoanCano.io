@@ -69,6 +69,7 @@ $ bundle -v
 ### Descargar repositorios y realizar cambios
 
 A modo de ejemplo voy a simular que descargo el repositorio donde tengo alojado mi blog, el cual es un fork de uno de los muchos temas de Jekyll.
+
 ```bash
 git clone https://github.com/JoanCano/joancano.github.io.git
 
