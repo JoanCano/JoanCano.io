@@ -183,6 +183,10 @@ This post is written in MarkDown, so may be you could want to check this [Markdo
 
 + [Babylon.js](https://www.babylonjs.com/)
 
++ [GUIDE TO HIGHLIGHT IMAGE CAPTURE](http://culturalheritageimaging.org/What_We_Offer/Downloads/RTI_Hlt_Capture_Guide_v2_0.pdf)
+
++ [practicalphotogrammetry](https://vimeo.com/channels/practicalphotogrammetry)
+
 ## Python
 
 + [Python Scripting for Spatial Data Processing](http://chris35wills.github.io/papers/python_scripting_for_spatial_data_processing.pdf)

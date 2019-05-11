@@ -27,6 +27,19 @@ Los siguientes vídeos y visualizadores son algunos de los modelos que he hecho.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GiyiEjxY1E4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+**Photogrammetry of statue with Capturing Reality and Olympus M5 mark II (12 mm)**
+
+<div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/c3b6cb260957434f804e5bf7d6afe6ff/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+    <a href="https://sketchfab.com/3d-models/estatua-parque-grande-c3b6cb260957434f804e5bf7d6afe6ff?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Estatua Parque Grande</a>
+    by <a href="https://sketchfab.com/joancalad?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">joancalad</a>
+    on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+</p>
+</div>
+
+
+
 ## Modelos en Sketchfab
 
 <div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/77cd6a4feca1483ab9ec067c89bba691/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
