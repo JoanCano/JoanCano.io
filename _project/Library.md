@@ -149,13 +149,7 @@ This post is written in MarkDown, so may be you could want to check this [Markdo
 
 ## Photogrammetry
 
-+ [Instalar ODM](https://gitlab.com/jgrocha/qgis.drone.workshop)
-
-+ [GUIA DE FOTOGRAMETRÍA](https://3dcollective.es/fotogrametria/)
-
-+ [DOCUMENTACIÓN GRÁFICA DEL PATRIMONIO ARQUITECTÓNICO APLICADO A SU GESTIÓN, CONSERVACIÓN Y DIFUSIÓN. EL CASO DE ESTUDIO DE LA VILLA DE ÁGREDA (SORIA) ](https://upcommons.upc.edu/bitstream/handle/2117/95548/TZPC2de2.pdf)
-
-+ [Thermographic and 3D Documentation of Djin Block Number 9 in Petra](http://www.gifle.webs.upv.es/petra_en.html)
++ [GUIA DE FOTOGRAMETRÍA - 3D Collective](https://3dcollective.es/fotogrametria/)
 
 + [FACTUMarte](http://www.factum-arte.com/ind/1/Technology)
 
@@ -163,29 +157,28 @@ This post is written in MarkDown, so may be you could want to check this [Markdo
 
 + [Quixel](https://quixel.com/megascans/library)
 
-+ [Convert OBJ assets to glTF](https://github.com/AnalyticalGraphicsInc/obj2gltf)
++ [Manual Pix4D](https://drive.google.com/file/d/1s9bQ7pAKHc7hUCRaYwEuCFxQ6AmiA9-u/view?usp=drivesdk)
 
-+ [SFM toolkit](http://www.visual-experiments.com/demos/sfmtoolkit/)
++ [Unity Photogrammetry Workflow](https://drive.google.com/file/d/1ywOCjYGKmjSKa6sH8LHBIOlFxPdmp_Km/view?usp=drivesdk)
 
-+ [MicMac](https://opengeospatialdata.springeropen.com/articles/10.1186/s40965-017-0027-2)
 
-+ [ArcLand](http://www.arcland.eu/capture/aerial-photography/1508-photogrammetric-3d-restitution-of-surfaces-with-free-tools)
++ [GUIDE TO HIGHLIGHT IMAGE CAPTURE](http://culturalheritageimaging.org/What_We_Offer/Downloads/RTI_Hlt_Capture_Guide_v2_0.pdf)
 
-+ [Photomodeler](http://www.photomodeler.com/index.html)
++ [practicalphotogrammetry](https://vimeo.com/channels/practicalphotogrammetry)
+
+### Photogrammetry Software
 
 + [6 Best Photogrammetry Software Tools in 2019](https://m.all3dp.com/1/best-photogrammetry-software/)
 
 + [Meshroom](https://alicevision.github.io/#meshroom)
 
-+ [Manual Pix4D](https://drive.google.com/file/d/1s9bQ7pAKHc7hUCRaYwEuCFxQ6AmiA9-u/view?usp=drivesdk)
++ [VisualSFM](http://ccwu.me/vsfm/)
 
-+ [Unity Photogrammetry Workflow](https://drive.google.com/file/d/1ywOCjYGKmjSKa6sH8LHBIOlFxPdmp_Km/view?usp=drivesdk)
++ [MicMac](https://micmac.ensg.eu/index.php/Accueil)
+
++ [Photomodeler](http://www.photomodeler.com/index.html)
 
 + [Babylon.js](https://www.babylonjs.com/)
-
-+ [GUIDE TO HIGHLIGHT IMAGE CAPTURE](http://culturalheritageimaging.org/What_We_Offer/Downloads/RTI_Hlt_Capture_Guide_v2_0.pdf)
-
-+ [practicalphotogrammetry](https://vimeo.com/channels/practicalphotogrammetry)
 
 ## Python
 
