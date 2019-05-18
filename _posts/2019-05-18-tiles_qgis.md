@@ -38,7 +38,7 @@ El proceso puede durar varias horas. Todo dependerá de la extensión y zoom de 
 
 Dejo aquí abajo el código del archivo html que he modificado para el visor de ejemplo. La ruta donde se debe guardar este hmtl es en la carpeta superior a las carpetas de los tiles, como se puede ver en la imagen de arriba.
 
-[Enlace visor Web](38994238.servicio-online.net/httpdocs/joancano.github.io/visores/tiles)
+[Enlace visor Web](http://38994238.servicio-online.net/joancano.github.io/visores/tiles)
 
 ```
 <!DOCTYPE html>
