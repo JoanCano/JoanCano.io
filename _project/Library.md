@@ -161,7 +161,6 @@ This post is written in MarkDown, so may be you could want to check this [Markdo
 
 + [Unity Photogrammetry Workflow](https://drive.google.com/file/d/1ywOCjYGKmjSKa6sH8LHBIOlFxPdmp_Km/view?usp=drivesdk)
 
-
 + [GUIDE TO HIGHLIGHT IMAGE CAPTURE](http://culturalheritageimaging.org/What_We_Offer/Downloads/RTI_Hlt_Capture_Guide_v2_0.pdf)
 
 + [practicalphotogrammetry](https://vimeo.com/channels/practicalphotogrammetry)
@@ -179,6 +178,13 @@ This post is written in MarkDown, so may be you could want to check this [Markdo
 + [Photomodeler](http://www.photomodeler.com/index.html)
 
 + [Babylon.js](https://www.babylonjs.com/)
+
++ [Houdini](https://www.sidefx.com/products/houdini/)
+
++ [Marmoset](https://marmoset.co/)
+
++ [3D coat](http://3dcoat.com/es/home/)
+
 
 ## Python
 
@@ -309,8 +315,6 @@ This post is written in MarkDown, so may be you could want to check this [Markdo
 
 + [Writing Python Scripts for Processing Framework (QGIS3)](http://www.qgistutorials.com/en/docs/3/processing_python_scripts.html)
 
-+ [Qgis Drone WS](https://gitlab.com/jgrocha/qgis.drone.workshop)
-
 + [Making thematic maps with R](https://workshop.mhermans.net/thematic-maps-r/)
 
 + [Documentos dinámicos, trabajo colaborativo y control de versiones con Rmarkdown y GitHub](https://natydasilva.github.io/Taller_ConectaR/#1)
@@ -326,8 +330,6 @@ This post is written in MarkDown, so may be you could want to check this [Markdo
 + [Curso de GPS con QGIS](https://drive.google.com/drive/folders/1kWjLC9wN_mZUtq3Kbw8pAcBo3rXf1y5K)
 
 + [Open source software for preprocessing GIS Data for Hydrological Models](https://drive.google.com/file/d/1bxQxCr_CJP1951gBAVN-THi8sbWoJBpv/view?usp=drivesdk)
-
-+ [Tutorial de Georreferenciación](https://drive.google.com/drive/folders/1aA7_Z46svQycOC_FtjOk5iG14Jm5zphZ)
 
 + [Introduction to QGIS Server by Boundless](https://drive.google.com/file/d/1BU1ys9zJX0Uv8qlA46FngD_Z3lO9d2BG/view?usp=drivesdk)
 
