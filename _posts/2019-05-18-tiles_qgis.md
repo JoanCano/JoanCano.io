@@ -14,7 +14,7 @@ Cargamos el ortomosaico que queremos tilear en QGIS, ya sea como nueva capa rast
 
 En la caja de herramientas de procesos escribimos “tiles”, y nos aparecerá una herramienta llamada “gdalAteselas” , la cual abriremos.
 
-![](http://38994238.servicio-online.net/joancano.github.io/imgPosts/tiles/gdalAteselas.PNG)
+![](http://38994238.servicio-online.net/joancano.github.io/imgPosts/tiles/gdalAteselas.png)
 
 Los parámetros a introducir son:
 + Capa de entrada: capa_raster_introducida
@@ -32,13 +32,13 @@ Lo que nos va a generar son:
 + una serie de carpetas que corresponden a los zooms que hemos indicado
 + un archivo html que podemos modificar
 
-![](http://38994238.servicio-online.net/joancano.github.io/imgPosts/tiles/zooms.PNG)
+![](http://38994238.servicio-online.net/joancano.github.io/imgPosts/tiles/zooms.png)
 
 El proceso puede durar varias horas. Todo dependerá de la extensión y zoom de nuestro ortomosaico.
 
 Dejo aquí abajo el código del archivo html que he modificado para el visor de ejemplo. La ruta donde se debe guardar este hmtl es en la carpeta superior a las carpetas de los tiles, como se puede ver en la imagen de arriba.
 
-[Enlace visor Web](http://38994238.servicio-online.net/joancano.github.io/visores/tiles)
+<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://38994238.servicio-online.net/joancano.github.io/visores/tiles" style="border: 1px solid black"></iframe><br/><small><a href="http://38994238.servicio-online.net/joancano.github.io/visores/tiles">Ver mapa más grande</a></small>
 
 ```
 <!DOCTYPE html>
