@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Cómo tilear un ráster en QGIS 3"
+title: "Cómo tilear un raster en QGIS 3"
 date: 2019-05-18
 author: "Joan Cano"
 categories: [gis]
