@@ -23,18 +23,22 @@ Los parámetros a introducir son:
 + Visor web: Leaflet (está traducido como Folleto)
 + Título del mapa: xxxxxxxxx
 + Copyright: Joan
+
 Parámetros avanzados
+
 + Método: Promedio
 + Sistema de referencia espacial: el mismo que la capa de entrada
+
 Directorio: xxxxxx
 
 Lo que nos va a generar son:
-+ una serie de carpetas que corresponden a los zooms que hemos indicado
+
++ una serie de carpetas con los tiles, que corresponden a los zooms que hemos indicado
 + un archivo html que podemos modificar
 
 ![](http://38994238.servicio-online.net/joancano.github.io/imgPosts/tiles/zooms.png)
 
-El proceso puede durar varias horas. Todo dependerá de la extensión y zoom de nuestro ortomosaico.
+El proceso puede durar varias horas. Todo dependerá de la extensión y zoom que queremos de nuestro ortomosaico.
 
 Dejo aquí abajo el código del archivo html que he modificado para el visor de ejemplo. La ruta donde se debe guardar este hmtl es en la carpeta superior a las carpetas de los tiles, como se puede ver en la imagen de arriba.
 
