@@ -254,6 +254,11 @@ This post is written in MarkDown, so may be you could want to check this [Markdo
 
 + [Intro to GIS and Spatial Analysis](https://mgimond.github.io/Spatial/index.html)
 
++ [FREE R READING MATERIAL](https://committedtotape.shinyapps.io/freeR/)
+
++ [Libros de R en ESPAÑOL](https://statsanddatasci.netlify.com/post/libros-en-espa%C3%B1ol/)
+
++ [Libros de R en ESPAÑOL: Parte 2](https://statsanddatasci.netlify.com/post/libros-en-espa%C3%B1ol-2/)
 
 
 ## Tools on web

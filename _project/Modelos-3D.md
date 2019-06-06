@@ -7,6 +7,17 @@ Uno de los proyectos que vengo realizando desde hace unos meses es la creación 
 Los siguientes vídeos y visualizadores son algunos de los modelos que he hecho. No son proyectos profesionales, tan solo el resultado de pruebas que hago para saber cómo funcionan según que procesos realizo, desde la toma de datos al postproceso.
 
 
+**Photogrammetry of Iglesia de San Miguel de Foces**
+
+<div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/f997b5916a2d41aa8408ad974f0f339b/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+    <a href="https://sketchfab.com/3d-models/san-miguel-de-foces-f997b5916a2d41aa8408ad974f0f339b?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">San Miguel de Foces</a>
+    by <a href="https://sketchfab.com/joancalad?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">joancalad</a>
+    on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+</p>
+</div>
+
 **Photogrammetry of a pine cone with Agisoft**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m_KSg91wAIk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -58,12 +69,19 @@ Los siguientes vídeos y visualizadores son algunos de los modelos que he hecho.
 </div>
 
 
-
-
 <div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/fd0a70c41b5d4d018d1fe31dda50f8f4/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
     <a href="https://sketchfab.com/3d-models/human-hand-fd0a70c41b5d4d018d1fe31dda50f8f4?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Human hand</a>
+    by <a href="https://sketchfab.com/joancalad?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">joancalad</a>
+    on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+</p>
+</div>
+
+<div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/4ac9e5f4febb41ba8fa8e6dd806053e3/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+    <a href="https://sketchfab.com/3d-models/ruinas-a-222-4ac9e5f4febb41ba8fa8e6dd806053e3?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Ruinas A-222</a>
     by <a href="https://sketchfab.com/joancalad?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">joancalad</a>
     on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
 </p>
