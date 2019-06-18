@@ -37,11 +37,7 @@ conservación y gestión.  necesidad de preservación de las manifestaciones art
 
 + Para alcanzar el objetivo principal de esta investigación, consistente en el desarrollo de una metodología para la documentación integral del arte rupestre  
 
-– Generación de MDS2
- georreferenciados de las cavidades,
- mediante la utilización
- de métodos topográficos y fotogramétricos, que proporcionan un archivo documental
- geométrico
+– Generación de MDS georreferenciados de las cavidades, mediante la utilización de métodos topográficos y fotogramétricos, que proporcionan un archivo documental geométrico
 
  Existe una variedad de métodos de procesamiento de imágenes adecuados para esta tarea, que incluyen K-medias agrupación 9 , Análisis de componentes principales (PCA) 10 , Análisis de componentes independientes (ICA) 11 y Análisis de mezclas espectrales lineales (LSMA) 12 , aunque desde el principio. En esta investigación, demostramos el éxito limitado de la agrupación K-means para nuestra aplicación ( Giacometti, 2013). Por lo tanto, procesamos las imágenes multiespectrales de cada muestra tratada utilizando tres métodos diferentes: PCA, ICA y LSMA.
 

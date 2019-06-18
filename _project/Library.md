@@ -84,6 +84,8 @@ This post is written in MarkDown, so may be you could want to check this [Markdo
 
 + [Introducing TileJSON.io](https://www.azavea.com/blog/2019/03/04/introducing-tilejson-io/)
 
++ [openmaptiles](https://openmaptiles.com)
+
 
 
 ## Linux
@@ -200,6 +202,8 @@ This post is written in MarkDown, so may be you could want to check this [Markdo
 
 + [Arboles de decision y Random Forest](https://bookdown.org/content/2031/)
 
++ [Análisis espacial con R: Usa R como un Sistema de Información Geográfica](http://eujournal.org/files/journals/1/books/JeanFrancoisMas.pdf)
+
 + [Introducción a Machine Learning con R y Tidyverse](https://rpubs.com/HAVB/intro_ml)
 
 + [SegOptim - A R package for performing object-based image classification](https://segoptim.bitbucket.io/docs/)
@@ -277,6 +281,9 @@ This post is written in MarkDown, so may be you could want to check this [Markdo
 
 + [http://libgen.io/](http://libgen.io/)
 
++ [SCULPTGL](https://stephaneginier.com/sculptgl/)
+
++ [construkted reality](https://edd7.construkted.com/)
 
 ## Random Information
 
@@ -300,7 +307,9 @@ This post is written in MarkDown, so may be you could want to check this [Markdo
 
 + [How to use your Raspberry Pi as a Chromecast alternative](https://thepi.io/how-to-use-your-raspberry-pi-as-a-chromecast-alternative/)
 
++ [Marui for Blender](https://www.marui-plugin.com/blender-xr/)
 
++ [Tilt Brush](https://www.tiltbrush.com/)
 
 ## Workshops
 
@@ -345,3 +354,5 @@ This post is written in MarkDown, so may be you could want to check this [Markdo
 + [Workshop PostgreSQL/PostGIS for beginners](https://github.com/astroidex/foss4g-2018-workshop-postgresql-postgis-for-beginners-aemde/blob/master/foss4g-2018-workshop-postgresql-postgis-for-beginners-aemde.md)
 
 + [rstudio-conf 2019 Workshop materials](https://github.com/rstudio/rstudio-conf/blob/master/2019/workshops.md)
+
++ [Qgis_siglibre2019 by lluisvicens](https://github.com/lluisvicens/taller_qgis_siglibre2019)
