@@ -12,7 +12,7 @@ Tenemos que tener 4 archivos. Entre ellos están el JS y CSS que se deben descar
 - panellum.css
 - imagen
 
-[LINK PANELLUM](https://joancano.github.io/static/projects/panos/panellum.html)
+[LINK PANELLUM](https://joancano.github.io/static/projects/web/panos/panellum.html)
 
 
 Y este sería el código html, fijaros en el contenedor 'panorama':
