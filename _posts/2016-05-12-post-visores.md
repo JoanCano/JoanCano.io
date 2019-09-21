@@ -44,7 +44,7 @@ Durante mi máster, tuvimos una salida de campo en la que identificamos diferent
 La API de Flickr nos permite almacenar y geolocalizar las fotos e interactuar con ellas mediante Leaflet. Si ya tenemos las fotos geolocalizadas (tomadas con móvil o cámara) podemos geolocalizarlas directamente, y si no podemos geolocalizarlas con Flickr o un software específico; en mi caso utilizo [Digikam](https://www.digikam.org/)
 
 
-### [Visor 6. Time and checkbox](https://joancano.github.io/static/projects/web/visores/visor_historia/index.html)
+### [Visor 6. Time and checkbox](https://joancano.github.io/static/projects/web/visores/visor_historia/)
 
 Este visor es más elaborado. Se trata de un visor que representa la ocupación francesa en Valencia durante los años 1812-13.
 
