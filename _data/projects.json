@@ -3,7 +3,7 @@
 		"slug": "Modelos-3D",
 		"name": "Modelos-3D",
 		"image": "modelos3d.png",
-		"url": "https://joancano.github.io/projects/modelos-3D",
+		"url": "https://joancano.github.io/project/Modelos-3D",
 		"date": "Oct 2018",
 		"tags": ["3D"]
 	},
@@ -11,8 +11,9 @@
 		"slug": "Library",
 		"name": "Library",
 		"image": "library.jpg",
-		"url": "https://joancano.github.io/projects/Library",
-		"date": "Nov 2018"
+		"url": "https://joancano.github.io/project/Library",
+		"date": "Nov 2018",
+		"tags": ["fotogrametria","3D, gis"]
 	},
 	{
 		"slug": "Lifemmetry",
@@ -25,8 +26,8 @@
 	{
 		"slug": "GC_esp",
 		"name": "GC_esp",
-		"image": "placeholder.jpg",
-		"url": "https://joancano.gitbook.io/GC_esp/",
+		"image": "nido.png",
+		"url": "https://joancano.gitbook.io/project/GC_esp/",
 		"date": "jun 2019",
 		"tags": ["fotogrametria","3D, gis"]
 	}

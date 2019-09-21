@@ -64,7 +64,14 @@ $ gem list jekyll
 # Comprobar si bundle está instalado
 $ bundle update jekyll
 $ bundle -v
+
+# Si tienes problemas con la gema nokogiri ( )
+$ sudo apt-get install build-essential patch ruby-dev zlib1g-dev liblzma-dev
+$ gem install nokogiri
 ```
+[Fuente](https://nokogiri.org/tutorials/installing_nokogiri.html)
+
+
 
 ### Descargar repositorios y realizar cambios
 

@@ -1,6 +1,6 @@
 ---
 layout: project_single
-title:  "Modelos 3D"
+title:  "Modelos-3D"
 slug: "Modelos-3D"
 ---
 Uno de los proyectos que vengo realizando desde hace unos meses es la creación de modelos 3D por fotogrametría.
