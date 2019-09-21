@@ -12,7 +12,7 @@ Gracias a una oportunidad de cooperación en Guatemala tuve la suerte de poder i
 
 La siguiente imagen es de la escuelita donde enseñé junto a mis compañeros el proyecto de OSM y lo que podía suponer para ellos, en concreto a esa comunidad y el municipio.
 
-#### [Link Panellum](http://38994238.servicio-online.net/joancano.github.io/panos/panellum.html)
+#### [Link Panellum](https://joancano.github.io/static/projects/web/panos/panellum.html)
 
 
 Con unos pocos ordenadores que disponían de un SO Windows 10 de 32 bits (si, es cierto), a duras penas pudimos

@@ -51,5 +51,3 @@ sudo apt install -y python-software-properties qgis python-qgis qgis-plugin-gras
 sudo apt-get install keepassx
 
 ```
-
-[installer.sh](http://38994238.servicio-online.net/joancano.github.io/scripts/installer.sh)

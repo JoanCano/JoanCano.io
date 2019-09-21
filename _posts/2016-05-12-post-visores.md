@@ -56,7 +56,7 @@ Se trata del mismo visor pero con un slider para mover según la fecha
 + [Time and Slider 1](https://joancano.github.io/static/projects/web/visores/visor_historia/versiones/v6/oneSlider.html)
 + [Time and Slider 2](https://joancano.github.io/static/projects/web/visores/visor_historia/versiones/v5/index.html)
 
-### [Visor 8. Raster tiles](hhttps://joancano.github.io/static/projects/web/visores/tiles)
+### [Visor 8. Raster tiles](https://joancano.github.io/static/projects/web/visores/tiles)
 
 Es un visor web simple, generado mediante la herramienta gdalAteselas de QGIS 3. Este es el enlace al post donde explico como realizarlo:
-https://joancano.github.io/gis/2019/05/18/tiles_qgis.html
+[https://joancano.github.io/gis/2019/05/18/tiles_qgis.html](https://joancano.github.io/gis/2019/05/18/tiles_qgis.html)

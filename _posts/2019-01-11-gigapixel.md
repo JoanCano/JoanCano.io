@@ -46,4 +46,4 @@ Todavía no entiendo el por qué, pero cuando he procesado los formatos png y ti
 
 Pd: aquí algunos de los visores hechos:
 + [A partir de malla](http://files.tecnitop.com/usuarios/joan/wordpress/tourMP.html)
-+ [Gigapixel de la Serra de Bèrnia](http://38994238.servicio-online.net/joancano.github.io/gigaBernia/gp_bernia.html)
++ [Gigapixel de la Serra de Bèrnia](https://joancano.github.io/static/projects/web/gigaBernia/gp_bernia.html)
