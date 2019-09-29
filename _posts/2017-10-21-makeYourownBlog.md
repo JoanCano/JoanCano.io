@@ -111,7 +111,7 @@ git init
 Jekyll también viene con un servidor de desarrollo incorporado que te permitirá previsualizarlo cómo en tu navegador localmente.
 
 ```bash
-$ jekyll serve
+$ bundle exec jekyll serve
 ```
 
 En caso de que no nos permita visualizarlo, es por los permisos del navegador. Tenemos que activar el puerto 4000.

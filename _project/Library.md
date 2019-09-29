@@ -148,6 +148,9 @@ This post is written in MarkDown, so may be you could want to check this [Markdo
 
 + [Deriving Data from Imagery](https://blog.mapillary.com/update/2019/02/19/intro-to-deriviste-and-openstreetmap.html)
 
+## Photo editing
+
++ https://templatetoaster.com/tutorials/gimp-resynthesizer-plugin/
 
 ## Photogrammetry
 
