@@ -48,3 +48,7 @@ military
 bunker_type=gun_emplacement
 
 Estado actual de desarrollo:
+
+Recopilación de información actual a partir de la página web: http://www.patrimonioculturaldearagon.es/ruta-vestigios-de-la-guerra-civil-y-la-posguerra, donde se encuentran las localizaciones de las 3 provincias de Aragón.
+
+

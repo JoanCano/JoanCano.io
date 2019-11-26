@@ -38,6 +38,29 @@ $ sudo apt install gimp-plugin-registry
 ```
 Ahora ya puedes utilizar la herramienta Filters > Enhance > Heal Selection Tool
 
+Actualizo con los siguientes párrafos un problema que he tenido recientemente, y es que en la versión que explico arriba es la 2.8, cuando la actual (08-10-19) es la 2.10.12.
+
+Al actualizar a la última versión he perdido la herramienta *Heal Selection Tool*, por lo que explico a continuación lo que he hecho:
+- Eliminar tanto gimp como todas las carpetas relacionadas con él, desde /usr/lib/gimp como en /home/user/.config y /home/user/.gimp2.8 con 'sudo apt --purge remove gimp' y luego manualmente las demás carpetas
+- He instalado la última versión a partir del repo PPA que mantiene el principal desarrollador de Gimp
+- Una vez incluido el repo, he instalado GIMP como anteriormente
+
+```bash
+$ sudo apt install gimp-plugin-registry
+```
+
+Sin embargo tendremos algunas herramientas de la *suite* pero no Heal Selection!, de manera que tendremos que instalar
+
+```bash
+$ sudo apt install gimp-python
+```
+
+Y además eliminar la ruta de los plug-ins que redirige a la carpeta del user, dejaremos solo la de /usr/lib/gimp (dentro de edición/preferencias)
+
+Una vez realizados estos pasos, iremos a Filtros - Restablecer todos los filtros.
+
+En cuanto habras GIMP debería aparecer la herramienta
+
 Dejo un vídeo utilizando la herramienta en Ubuntu 18.04.03:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/659J9YquZsg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

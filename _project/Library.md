@@ -11,6 +11,8 @@ This post is written in MarkDown, so may be you could want to check this [Markdo
 
 + [Blender Basics: Classroom Tutorial Book](https://archive.org/details/2017BlenderBasics/page/n21)
 
++ [Open Image Denoise en Blender 2.81](http://akirasan.net/intel-r-open-image-denoise/)
+
 
 
 ## GIS & Remote Sensing
@@ -65,6 +67,13 @@ This post is written in MarkDown, so may be you could want to check this [Markdo
 
 + [Use of QGIS Geographical Information System in Basic Field Archaeology and LIDAR Processing](https://drive.google.com/file/d/18SE2Pd96l7i5wB5B0HZAASdu8QZhVASc/view?usp=drivesdk)
 
++ [Análisis geoespacial en los estudios urbanos](http://www.ciga.unam.mx/publicaciones/index.php/catalogo-completo/61-analisis-geoespacial-en-los-estudios-urbanos)
+
++ [http://www.gisandbeers.com/identificar-proyecciones-desconocidas-qgis/](Cómo identificar proyecciones desconocidas en QGIS)
+
++ [Digitalización avanzada en QGIS](https://www.cursosgis.com/digitalizacion-avanzada-en-qgis-complementos-de-digitalizacion-mas-completos/)
+
+
 
 ### Vector Tiles
 
@@ -86,6 +95,8 @@ This post is written in MarkDown, so may be you could want to check this [Markdo
 
 + [openmaptiles](https://openmaptiles.com)
 
++ [ThRasE is a Thematic Raster Editor plugin of Qgis](https://smbyc.github.io/ThRasE/)
+
 
 
 ## Linux
@@ -102,6 +113,7 @@ This post is written in MarkDown, so may be you could want to check this [Markdo
 
 + [AppImage applications for Linux without installation](https://appimage.github.io/)
 
++ [https://uniwebsidad.com/libros/python/capitulo-1/introduccion-al-sistema-operativo-gnu-linux](https://uniwebsidad.com/libros/python/capitulo-1/introduccion-al-sistema-operativo-gnu-linux)
 
 
 ### Software
@@ -114,6 +126,9 @@ This post is written in MarkDown, so may be you could want to check this [Markdo
 
 + [Herramientas y manuales de Sentinel Toolbox para SNAP](http://www.gisandbeers.com/manuales-de-sentinel-toolbox-para-snap/)
 
++ [GeoTrellis.geographic data processing engine for high performance applications](https://geotrellis.io/)
+
++ [shp2pgsql](https://www.bostongis.com/pgsql2shp_shp2pgsql_quickguide.bqg)
 
 ### Geo + Photos
 
@@ -148,9 +163,21 @@ This post is written in MarkDown, so may be you could want to check this [Markdo
 
 + [Deriving Data from Imagery](https://blog.mapillary.com/update/2019/02/19/intro-to-deriviste-and-openstreetmap.html)
 
++ [RapID](https://mapwith.ai/rapid#background=Maxar-FB&disable_features=boundaries&map=2.00/0.0/0.0)
+
++ [PROTOMAPS](https://protomaps.com/extracts/)
+
++ [Maproulette](https://maproulette.org/)
+
++ [Tasking Manager](https://tasks-assisted.hotosm.org/)
+
+
+
 ## Photo editing
 
 + https://templatetoaster.com/tutorials/gimp-resynthesizer-plugin/
+
++ [http://imageplay.io/](http://imageplay.io/)
 
 ## Photogrammetry
 
@@ -169,6 +196,13 @@ This post is written in MarkDown, so may be you could want to check this [Markdo
 + [GUIDE TO HIGHLIGHT IMAGE CAPTURE](http://culturalheritageimaging.org/What_We_Offer/Downloads/RTI_Hlt_Capture_Guide_v2_0.pdf)
 
 + [practicalphotogrammetry](https://vimeo.com/channels/practicalphotogrammetry)
+
++ [Getting started with Photogrammetry with an Smartphone camera](https://medium.com/realities-io/getting-started-with-photogrammetry-d0a6ee40cb72)
+
++ [De-lighting Tutorial - Unity Official](https://www.youtube.com/watch?v=BCX1ybbwJQ0&fbclid=IwAR32yycxEig3Av5vmDchP6HpBxGNjyG1-gbCdZ-DEOqCAqvcwELvYufA6dM)
+
++ [Cleaning up a 3D scan with Meshmixer](https://3dtotal.com/tutorials/t/cleaning-up-a-3d-scan-with-meshmixer?fbclid=IwAR35kehLPl_opEXhB8inHAyXn0XSHK6ujngrYfULTdCq4fmQQWyPLg8rvaA#article-introduction)
+
 
 ### Photogrammetry Software
 
@@ -190,12 +224,22 @@ This post is written in MarkDown, so may be you could want to check this [Markdo
 
 + [3D coat](http://3dcoat.com/es/home/)
 
++ [Autodesk Meshmixer](http://www.meshmixer.com/)
+
 
 ## Python
 
 + [Python Scripting for Spatial Data Processing](http://chris35wills.github.io/papers/python_scripting_for_spatial_data_processing.pdf)
 
 + [Unsupervised Changed Detection in Multi-Temporal Satellite Images using PCA & K-Means](https://appliedmachinelearning.blog/2017/11/25/unsupervised-changed-detection-in-multi-temporal-satellite-images-using-pca-k-means-python-code/)
+
++ [GeoPandas](https://geopandas.readthedocs.io/en/latest/index.html)
+
++ [PythonDataScienceHandbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
+
++ [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
+
++ [Raster Vision](https://docs.rastervision.io/en/0.10/)
 
 
 
@@ -267,6 +311,12 @@ This post is written in MarkDown, so may be you could want to check this [Markdo
 
 + [Libros de R en ESPAÑOL: Parte 2](https://statsanddatasci.netlify.com/post/libros-en-espa%C3%B1ol-2/)
 
++ [How to Build a GIF of Satellite Imagery in R](https://gijn.org/2019/08/07/how-to-build-a-gif-of-satellite-imagery-in-r/)
+
++ [Ciencia de datos para curiosos](https://bookdown.org/martinmontaneb/CienciaDeDatos/)
+
++ [Análisis espacial con R: Usa R como un SIG](http://eujournal.org/files/journals/1/books/JeanFrancoisMas.pdf)
+
 
 ## Tools on web
 
@@ -287,6 +337,9 @@ This post is written in MarkDown, so may be you could want to check this [Markdo
 + [SCULPTGL](https://stephaneginier.com/sculptgl/)
 
 + [construkted reality](https://edd7.construkted.com/)
+
++ [sculptgl](https://stephaneginier.com/sculptgl/)
+
 
 ## Random Information
 
@@ -313,6 +366,19 @@ This post is written in MarkDown, so may be you could want to check this [Markdo
 + [Marui for Blender](https://www.marui-plugin.com/blender-xr/)
 
 + [Tilt Brush](https://www.tiltbrush.com/)
+
++ [Thecartographycorner](https://thecartographycorner.com/)
+
++ [DOCUMENTACIÓN GEOMÉTRICA DE ELEMENTOS PATRIMONIALES CON LÁSER ESCÁNER TERRESTRE](https://docplayer.es/amp/28531315-La-documentacion-geometrica-de-elementos-patrimoniales-con-laser-escaner-terrestre-la-experiencia-del-lapa-en-galicia-1.html)
+
++ [Data Science Cheatsheets](https://github.com/abhat222/Data-Science--Cheat-Sheet)
+
++ [Cloud-to-Mesh Distance](https://www.cloudcompare.org/doc/wiki/index.php?title=Cloud-to-Mesh_Distance)
+
++ [Osigris] App móvil para gestión de cultivos}(http://www.osigris.com/)
+
++ [Tabula. Extracción tablas desde PDF](https://tabula.technology/)
+
 
 ## Workshops
 
@@ -359,3 +425,13 @@ This post is written in MarkDown, so may be you could want to check this [Markdo
 + [rstudio-conf 2019 Workshop materials](https://github.com/rstudio/rstudio-conf/blob/master/2019/workshops.md)
 
 + [Qgis_siglibre2019 by lluisvicens](https://github.com/lluisvicens/taller_qgis_siglibre2019)
+
++ [Entradas de Jesús Gómez Fernández](https://www.altergeosistemas.com/blog/author/jegofer/)
+
++ [Workshop on PostGIS and QGIS with 3D data](https://github.com/Oslandia/workshop-postgis-qgis-3d/blob/master/workshop.md)
+
++ [Geospatial Analysis](https://www.kaggle.com/learn/geospatial-analysis)
+
++ [Puertos USB y Python](https://ronaldl337.wordpress.com/2019/10/16/programando-en-python-tutorial-2/amp/?__twitter_impression=true)
+
++ [PyQGIS in a Day Learn the QGIS Python API from the ground up](https://courses.spatialthoughts.com/pyqgis-in-a-day.html)
